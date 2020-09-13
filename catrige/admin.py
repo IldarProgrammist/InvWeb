@@ -10,7 +10,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Catriege)
 class CatrigeAdmin(admin.ModelAdmin):
-    list_display = ['serialNumber','modelProduct','date']
+    list_display = ['serialNumber','modelProduct','status','date']
 
 @admin.register(CatrigeModel)
 class CatrigeModelAdmin(admin.ModelAdmin):
