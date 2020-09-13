@@ -9,13 +9,17 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 @admin.register(Catriege)
-class PrinterAdmin(admin.ModelAdmin):
-    list_display = ['category','serialNumber','modelProduct','date']
+class CatrigeAdmin(admin.ModelAdmin):
+    list_display = ['serialNumber','modelProduct','date']
 
 @admin.register(CatrigeModel)
-class PrinterAdmin(admin.ModelAdmin):
+class CatrigeModelAdmin(admin.ModelAdmin):
     list_display = ['model', 'color','firm']
 
 @admin.register(PrinterCatrigeCompatibility)
-class PrinterCatrigeCompatibilityAdmin(admin.ModelAdmin):
+class CatrigeCatrigeCompatibilityAdmin(admin.ModelAdmin):
     list_display = ['number', 'printer','model']
+
+@admin.register(Status)
+class CatrigeStatusAdmin(admin.ModelAdmin):
+    list_display = ['name']

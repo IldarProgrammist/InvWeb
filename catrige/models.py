@@ -30,8 +30,8 @@ class Status(models.Model):
 
 
     class Meta:
-        verbose_name = 'Статус'
-        verbose_name_plural = 'Статусы'
+        verbose_name = 'Статус картриджа'
+        verbose_name_plural = 'Статусы картриджей'
 
     def __str__(self):
         return self.name
