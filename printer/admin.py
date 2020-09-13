@@ -8,7 +8,7 @@ class FirmAdmin(admin.ModelAdmin):
 
 
 @admin.register(Printer)
-class FirmAdmin(admin.ModelAdmin):
+class PrinterAdmin(admin.ModelAdmin):
     list_display = ['category', 'serialNumber','modelProduct','status']
 
 

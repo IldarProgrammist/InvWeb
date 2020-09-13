@@ -36,7 +36,5 @@ class Products(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория оборудования')
     serialNumber = models.CharField(max_length=40, verbose_name='Серийный номер', unique=True)
     modelProduct = models.ForeignKey(Models, on_delete=models.CASCADE, verbose_name='Модель')
-
-    date = models.DateField()
     class Meta:
         abstract = True
