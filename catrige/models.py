@@ -25,8 +25,21 @@ class CatrigeModel(Models):
         return self.model
 
 
+class Status(models.Model):
+    name = models.CharField(max_length=100, verbose_name='Статус')
+
+
+    class Meta:
+        verbose_name = 'Статус'
+        verbose_name_plural = 'Статусы'
+
+    def __str__(self):
+        return self.name
+
+
+
 class Catriege(Products):
-    pass
+
 
     class Meta:
         verbose_name = 'Картридж'

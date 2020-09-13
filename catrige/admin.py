@@ -5,7 +5,7 @@ from catrige.models import *
 
 @admin.register(Color)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['name']
+    list_display = ['name','word']
 
 
 @admin.register(Catriege)
