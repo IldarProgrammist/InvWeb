@@ -15,3 +15,7 @@ class PrinterAdmin(admin.ModelAdmin):
 @admin.register(CatrigeModel)
 class PrinterAdmin(admin.ModelAdmin):
     list_display = ['model', 'color','firm']
+
+@admin.register(PrinterCatrigeCompatibility)
+class PrinterCatrigeCompatibilityAdmin(admin.ModelAdmin):
+    list_display = ['number', 'printer','model']

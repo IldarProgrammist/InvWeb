@@ -1,4 +1,5 @@
 from main.models import *
+from printer.models import *
 
 
 class Color(models.Model):
@@ -35,8 +36,19 @@ class Catriege(Products):
         return self.serialNumber
 
 
+"""Совместимость принтера и картриджа"""
 
+class PrinterCatrigeCompatibility(models.Model):
+    number = models.CharField(max_length=50, verbose_name="Номер", unique=True)
+    printer = models.ForeignKey(PrinterModel, on_delete=models.CASCADE, verbose_name='Модель принтера')
+    model = models.ForeignKey(CatrigeModel, on_delete=models.CASCADE, verbose_name='Модель картриджа')
 
+    class Meta:
+        verbose_name = 'Совместимость картриджа'
+        verbose_name_plural = 'Совместимость картриджей'
+
+    def __str__(self):
+        return self.number
 
 
 
