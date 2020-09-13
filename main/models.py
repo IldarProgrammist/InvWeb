@@ -2,6 +2,7 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField(max_length=50, verbose_name='Категория')
+    slug = models.SlugField(unique=True)
 
     class Meta:
         verbose_name ='Категория'
@@ -13,7 +14,7 @@ class Category(models.Model):
 
 class Firms(models.Model):
     name = models.CharField(max_length=50, verbose_name='Фирма', unique= True)
-
+    slug = models.SlugField(unique=True)
     class Meta:
         verbose_name ='Фирма'
         verbose_name_plural = 'Фирмы'
