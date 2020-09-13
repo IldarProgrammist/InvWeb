@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
    {% block  header%}
         {% include 'header.html' %}
     {% endblock %}
@@ -9,8 +8,28 @@
 
     {% block content %}
 
-    {% endblock %}
+        <div class="container">
+            <div class="row">
+                    <div class="col">
+                       <a href="#"> <img class="img-wrapper" src="{% static 'img/pc_.png' %}"></a>
+                            <a class="link_wrap" href="#">Рабочие места</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-wrapper" src="{% static 'img/per.png' %}"></a>
+                            <a class="link_wrap" href="#">Пользователи</a>
+                    </div>
+                    <div class="col">
+                         <a href="#"><img class="img-wrapper" src="{% static 'img/print.png' %}"></a>
+                            <a class="link_wrap" href="#">Печатные устройства</a>
+                    </div>
 
+            </div>
+        </div>
+
+        </div>
+
+
+    {% endblock %}
 
     {% block footer %}
          {% include 'footer.html' %}

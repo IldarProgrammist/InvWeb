@@ -1,7 +1,51 @@
-*{
-    margin: 0;
-    padding: 0;
+ /*============ Сброс стилей =============*/
+ * {
+     margin: 0;
+ }
+ html, body {
+     height: 100%;
+ }
+
+
+body {
+    display: flex;
+    flex-direction: column;
 }
-.wraper{
-    min-height: calc(100vh - 80px);
+
+
+
+.content, .header, .footer {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
 }
+
+.content {
+    flex-grow: 1;
+}
+
+
+ .footer {
+ background: #f7f7f7;
+ position: absolute;
+ bottom: 0;
+}
+
+.img-wrapper{
+    margin: 50px;
+    padding-top: 50px;
+}
+
+.link-wrap{
+    text-align: center;
+}
+
+.link_wrap{
+    color: black;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    text-decoration: none;
+}
+
