@@ -39,7 +39,7 @@ class Status(models.Model):
 
 
 class Catriege(Products):
-
+    status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус')
 
     class Meta:
         verbose_name = 'Картридж'
