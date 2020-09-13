@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.views.generic import *
 
-# Create your views here.
+from main.models import Category
+
+
+class HomeView(ListView):
+   template_name = 'main/index.html'
+   queryset = Category
+
