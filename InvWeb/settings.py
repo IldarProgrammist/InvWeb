@@ -1,5 +1,3 @@
-
-
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -48,7 +46,9 @@ ROOT_URLCONF = 'InvWeb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR,'templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -96,9 +96,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/3.0/topics/i18n/
-
 LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
@@ -110,9 +107,15 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
-
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+
+  os.path.join(BASE_DIR, "static", "static_dev"),
+
+)
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
