@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/InvWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/InvWeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InvWeb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/InvWeb/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
-    </list>
+    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="Изменение СУБД на posgresql" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -226,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600109557666</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Изменение СУБД на posgresql">
+      <created>1600179843156</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1600179843156</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -264,13 +264,18 @@
     <MESSAGE value="Создание главной страницы" />
     <MESSAGE value="создание файла requirements.txt" />
     <MESSAGE value="добавление  файла Catrige.html&#10;добавление  палели поиска в файле Catrige.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавление  файла Catrige.html&#10;добавление  палели поиска в файле Catrige.html" />
+    <MESSAGE value="Изменение СУБД на posgresql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменение СУБД на posgresql" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2119" y="188" key="SettingsEditor" timestamp="1600176754542">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2119" y="188" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600176754542" />
+    <state x="2220" y="238" key="Vcs.Push.Dialog.v2" timestamp="1600180161283">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2220" y="238" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600180161283" />
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600173112673">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
