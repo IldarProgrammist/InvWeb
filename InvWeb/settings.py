@@ -67,16 +67,16 @@ WSGI_APPLICATION = 'InvWeb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'portenergodb',
-        'USER': 'root',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'PortenergoDB',
+        'USER': 'postgres',
         'PASSWORD': 'masterkey',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
         'OPTIONS': {
-
         },
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 

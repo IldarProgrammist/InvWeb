@@ -1,11 +1,12 @@
 from django.db import models
 
+
 class Category(models.Model):
     name = models.CharField(max_length=50, verbose_name='Категория')
-    slug = models.SlugField(unique=True)
+    slug = models.CharField(max_length=30, unique=True)
 
     class Meta:
-        verbose_name ='Категория'
+        verbose_name = 'Категория'
         verbose_name_plural = 'Категории'
 
     def __str__(self):
@@ -13,14 +14,16 @@ class Category(models.Model):
 
 
 class Firms(models.Model):
-    name = models.CharField(max_length=50, verbose_name='Фирма', unique= True)
+    name = models.CharField(max_length=50, verbose_name='Фирма', unique=True)
     slug = models.SlugField(unique=True)
+
     class Meta:
-        verbose_name ='Фирма'
+        verbose_name = 'Фирма'
         verbose_name_plural = 'Фирмы'
 
     def __str__(self):
         return self.name
+
 
 class Models(models.Model):
     model = models.CharField(max_length=50, verbose_name='Модель', unique=True)
@@ -31,10 +34,10 @@ class Models(models.Model):
         return self.model
 
 
-
 class Products(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория оборудования')
     serialNumber = models.CharField(max_length=40, verbose_name='Серийный номер', unique=True)
     modelProduct = models.ForeignKey(Models, on_delete=models.CASCADE, verbose_name='Модель')
+
     class Meta:
         abstract = True
