@@ -32,22 +32,35 @@ body {
 }
 
 .img-wrapper{
-    margin: 50px;
-    padding-top: 50px;
-}
+      padding-top:190px;
 
-.link-wrap{
-    text-align: center;
-}
+    }
+
+
+
+
 
 .link_wrap{
     color: black;
     font-size: 24px;
     display: flex;
-    justify-content: center;
-    padding-top: 15px;
-    text-decoration: none;
+    padding-left: 46px;
+    padding-top: 55px;
+
 }
+
+
+
+
+
+.link_wrap:hover{
+   color: red;
+   text-decoration: none;
+
+}
+
+
+
 
 .zag{
     margin: 30px;
