@@ -39,7 +39,6 @@ body {
 
 
 
-
 .link_wrap{
     color: black;
     font-size: 24px;
@@ -49,10 +48,6 @@ body {
 
 }
 
-
-
-
-
 .link_wrap:hover{
    color: red;
    text-decoration: none;
@@ -60,9 +55,10 @@ body {
 }
 
 
-
-
 .zag{
     margin: 30px;
 }
 
+a>navbar-brand{
+    baground
+}

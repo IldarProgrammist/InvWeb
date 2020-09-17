@@ -3,5 +3,6 @@ from catrige.views import *
 
 urlpatterns = [
     path('',  catrigeInfo, name='catrige'),
-    path('List/', ListCatrigeView.as_view(), name='catrigeList'),
+    path('',  printSection, name='list'),
+    path('section/',  catrigeSection, name='ctSection'),
 ]

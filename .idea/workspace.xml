@@ -19,14 +19,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/static/static_dev/img/book.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static_dev/img/catrige.png" afterDir="false" />
+    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="Link в Катриджах">
+      <change afterPath="$PROJECT_DIR$/printer/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/static_dev/fonts/Archangelsk.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/static_dev/img/detaile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/catrige/carigeSpace.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/printer/printer_info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InvWeb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/InvWeb/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catrige/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catrige/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/printer/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/static_dev/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/static_dev/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/catrige/catrige.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catrige/catrige.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/catrige/catrigesList.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +47,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -96,6 +103,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Projects\python\django\InvWeb\static\static_dev\img" />
+      <recent name="E:\Projects\python\django\InvWeb\static\static_dev\fonts" />
       <recent name="D:\Projects\python\django\InvWeb\static\static_dev\bootstrap\css" />
       <recent name="D:\Projects\python\django\InvWeb\static\static_dev\bootstrap\js" />
       <recent name="D:\Projects\python\django\InvWeb\static\static_dev\bootstrap" />
@@ -242,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600180251056</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Link в Катриджах">
+      <created>1600268510845</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1600268510845</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -281,17 +296,18 @@
     <MESSAGE value="создание файла requirements.txt" />
     <MESSAGE value="добавление  файла Catrige.html&#10;добавление  палели поиска в файле Catrige.html" />
     <MESSAGE value="Изменение СУБД на posgresql" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменение СУБД на posgresql" />
+    <MESSAGE value="Link в Катриджах" />
+    <option name="LAST_COMMIT_MESSAGE" value="Link в Катриджах" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2119" y="188" key="SettingsEditor" timestamp="1600176754542">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2119" y="188" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600176754542" />
-    <state x="2220" y="238" key="Vcs.Push.Dialog.v2" timestamp="1600180268810">
+    <state x="2220" y="238" key="Vcs.Push.Dialog.v2" timestamp="1600268521606">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2220" y="238" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600180268810" />
+    <state x="2220" y="238" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600268521606" />
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600173112673">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
