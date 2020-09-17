@@ -1,3 +1,4 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from printer.models import Printer
 
-# Create your views here.
+
