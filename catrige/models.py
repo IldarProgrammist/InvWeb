@@ -1,7 +1,9 @@
+from django.contrib.contenttypes.fields import GenericForeignKey
+
 from main.models import *
 from printer.models import *
-
-
+from main.models import *
+from django.contrib.contenttypes.models import ContentType
 class Color(models.Model):
     name = models.CharField(max_length=30, verbose_name='Цвет', unique=True)
     word = models.CharField(max_length=1, verbose_name='Обозначение', unique=True)
@@ -15,6 +17,7 @@ class Color(models.Model):
         return self.name
 
 class CatrigeModel(Models):
+    slug = models.SlugField(unique=True)
     color = models.ForeignKey(Color, on_delete=models.CASCADE, verbose_name='Цвет')
 
     class Meta:
@@ -37,12 +40,9 @@ class Status(models.Model):
         return self.name
 
 
-
 class Catriege(Products):
-
     status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус')
     date = models.DateField()
-
     class Meta:
         verbose_name = 'Картридж'
         verbose_name_plural = 'Картриджи'
