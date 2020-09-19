@@ -2,9 +2,22 @@ from django.contrib import admin
 from printer.models import *
 from django import forms
 
+@admin.register(Firm)
+class FirmAdmin(admin.ModelAdmin):
+    list = ['name']
+
 @admin.register(PrinterModel)
 class FirmAdmin(admin.ModelAdmin):
-    pass
+    list = ['name']
+
+@admin.register(ModelFirm)
+class ModelFirmAdmin(admin.ModelAdmin):
+    list_display = ['firm','model']
+
+@admin.register(PtinterCatrige)
+class ModelFirmAdmin(admin.ModelAdmin):
+    list_display = ['printerModel','catrigeModel']
+
 
 
 class PrinterChoiceField(forms.ModelChoiceField):
@@ -21,14 +34,6 @@ class PrinterAdmin(admin.ModelAdmin):
 
 
 
-
-
-
-
-
-@admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['name']
 
 
 @admin.register(Status)

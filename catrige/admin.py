@@ -2,7 +2,6 @@ from django.contrib import admin
 from catrige.models import *
 from django import  forms
 
-
 @admin.register(Color)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['name','word']
@@ -14,6 +13,12 @@ class CatrigeModelChoiceFiedl(forms.ModelChoiceField):
     pass
 
 
+@admin.register(CatrigeModel)
+class CatrigeModelAdmin(admin.ModelAdmin):
+    list_display = ['name', 'color']
+
+
+
 @admin.register(Catriege)
 class CatrigeAdmin(admin.ModelAdmin):
     list_display = ['serialNumber', 'status','date']
@@ -22,14 +27,6 @@ class CatrigeAdmin(admin.ModelAdmin):
         if db_field.name == 'category':
             return CatrigeChoiceField(Category.objects.filter(slug = 'catrige'))
         return  super().formfield_for_foreignkey(db_field, request, **kwargs)
-
-
-
-
-@admin.register(CatrigeModel)
-class CatrigeModelAdmin(admin.ModelAdmin):
-    list_display = ['name', 'color','firm']
-
 
 
 @admin.register(Status)

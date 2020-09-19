@@ -3,4 +3,5 @@ from main.views import *
 urlpatterns = [
 
     path('', HomeView.as_view(), name='home'),
+    path('print/',  pintView, name='print'),
 ]

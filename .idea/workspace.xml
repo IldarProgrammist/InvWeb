@@ -21,8 +21,21 @@
   <component name="ChangeListManager">
     <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="Исправлена ошибка при добавлении в модель принтеров">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InvWeb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/InvWeb/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catrige/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catrige/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catrige/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catrige/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/printer/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/printer/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/printer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/printer/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/printer/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/printer/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/catrige/catreigModels.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catrige/catreigModels.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/catrige/catrige.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/print.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,19 +98,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SiburAdmin\PycharmProjects\InvWeb\templates\main" />
+      <recent name="E:\Projects\python\django\InvWeb\static\static_dev\img" />
+      <recent name="E:\Projects\python\django\InvWeb\static\static_dev\fonts" />
+      <recent name="D:\Projects\python\django\InvWeb\static\static_dev\bootstrap\css" />
+      <recent name="D:\Projects\python\django\InvWeb\static\static_dev\bootstrap\js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Projects\python\django\InvWeb\static\static_dev\img" />
       <recent name="D:\Projects\python\django\InvWeb\static\static_dev\img" />
       <recent name="D:\Projects\python\django\InvWeb\static\static_dev\js" />
       <recent name="D:\Projects\python\django\InvWeb\static\static_dev\css" />
       <recent name="D:\Projects\python\django\InvWeb\printer" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Projects\python\django\InvWeb\static\static_dev\img" />
-      <recent name="E:\Projects\python\django\InvWeb\static\static_dev\fonts" />
-      <recent name="D:\Projects\python\django\InvWeb\static\static_dev\bootstrap\css" />
-      <recent name="D:\Projects\python\django\InvWeb\static\static_dev\bootstrap\js" />
-      <recent name="D:\Projects\python\django\InvWeb\static\static_dev\bootstrap" />
     </key>
   </component>
   <component name="RunManager">

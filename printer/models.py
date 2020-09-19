@@ -1,11 +1,12 @@
+from catrige.models import CatrigeModel
 from main.models import *
 from localization.models import *
 
 
 
 class PrinterModel(models.Model):
-    name = models.CharField(max_length=100, verbose_name='Название модели принтера')
-    firm = models.ForeignKey(Firms, models.CASCADE, verbose_name='Фирма')
+    name = models.CharField(max_length=100, verbose_name='Название модели принтера', unique=True)
+
     photo = models.ImageField(blank=True)
 
     class Meta:
@@ -14,6 +15,38 @@ class PrinterModel(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
+class Firm(models.Model):
+    name = models.CharField(max_length=100, verbose_name='Фирма')
+    slug = models.SlugField(unique=True)
+
+    class Meta:
+        verbose_name = 'Фирма принтера'
+        verbose_name_plural = 'Фирмы принтеров'
+
+    def __str__(self):
+        return self.name
+
+
+class ModelFirm(models.Model):
+    number = models.IntegerField(verbose_name='Номер', unique=True, auto_created=True)
+    firm = models.ForeignKey(Firm, models.CASCADE, verbose_name='Фирма')
+    model = models.ForeignKey(PrinterModel, models.CASCADE, verbose_name='Модель принтера')
+
+    def __str__(self):
+        return "{} {}".format(self.firm.name, self.model.name)
+
+
+class PtinterCatrige(models.Model):
+    number = models.IntegerField(verbose_name='Номер', unique=True)
+    printerModel = models.ForeignKey(PrinterModel, models.CASCADE, verbose_name='Модель принтера')
+    catrigeModel = models.ForeignKey(CatrigeModel, models.CASCADE, verbose_name='Модель картриджа', unique=True)
+
+    def __str__(self):
+        return "{} {}".format(self.printerModel.name, self.catrigeModel.name)
+
 
 
 
@@ -30,7 +63,9 @@ class Status(models.Model):
 
 
 class Printer(Products):
+    printerModel = models.ForeignKey(PrinterModel, on_delete=models.CASCADE, verbose_name='Модель принтера')
     room = models.ForeignKey(Room, on_delete=models.CASCADE, verbose_name='Локация')
+    ip = models.CharField(max_length=30, verbose_name='IP-адрес', blank=True)
     status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус принтера')
 
     class Meta:
