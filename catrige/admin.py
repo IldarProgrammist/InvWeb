@@ -8,16 +8,15 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ['name','word']
 
 
-
-
 class CatrigeChoiceField(forms.ModelChoiceField):
     pass
-
+class CatrigeModelChoiceFiedl(forms.ModelChoiceField):
+    pass
 
 
 @admin.register(Catriege)
 class CatrigeAdmin(admin.ModelAdmin):
-    list_display = ['serialNumber','modelProduct','status','date']
+    list_display = ['serialNumber', 'status','date']
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == 'category':
@@ -26,13 +25,12 @@ class CatrigeAdmin(admin.ModelAdmin):
 
 
 
+
 @admin.register(CatrigeModel)
 class CatrigeModelAdmin(admin.ModelAdmin):
-    list_display = ['model', 'color','firm']
+    list_display = ['name', 'color','firm']
 
-@admin.register(PrinterCatrigeCompatibility)
-class CatrigeCatrigeCompatibilityAdmin(admin.ModelAdmin):
-    list_display = ['number', 'printer','model']
+
 
 @admin.register(Status)
 class CatrigeStatusAdmin(admin.ModelAdmin):

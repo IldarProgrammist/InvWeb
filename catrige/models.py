@@ -1,9 +1,10 @@
 from django.contrib.contenttypes.fields import GenericForeignKey
-
 from main.models import *
 from printer.models import *
 from main.models import *
 from django.contrib.contenttypes.models import ContentType
+
+
 class Color(models.Model):
     name = models.CharField(max_length=30, verbose_name='Цвет', unique=True)
     word = models.CharField(max_length=1, verbose_name='Обозначение', unique=True)
@@ -16,16 +17,18 @@ class Color(models.Model):
     def __str__(self):
         return self.name
 
-class CatrigeModel(Models):
-    slug = models.SlugField(unique=True)
+class CatrigeModel(models.Model):
+    name = models.CharField(max_length=150, verbose_name='Название модели картриджа')
     color = models.ForeignKey(Color, on_delete=models.CASCADE, verbose_name='Цвет')
+    firm = models.ForeignKey(Firms, on_delete= models.CASCADE, verbose_name='Фирма')
+    fhoto = models.ImageField(verbose_name='Фото', blank=True)
 
     class Meta:
         verbose_name = 'Модель картриджа'
         verbose_name_plural = 'Модели картриджей'
 
     def __str__(self):
-        return self.model
+        return self.name
 
 
 class Status(models.Model):
@@ -41,6 +44,7 @@ class Status(models.Model):
 
 
 class Catriege(Products):
+    model = models.ForeignKey(CatrigeModel, models.CASCADE, verbose_name='Модель картриджа')
     status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус')
     date = models.DateField()
     class Meta:
@@ -49,21 +53,6 @@ class Catriege(Products):
 
     def __str__(self):
         return self.serialNumber
-
-
-"""Совместимость принтера и картриджа"""
-
-class PrinterCatrigeCompatibility(models.Model):
-    number = models.CharField(max_length=50, verbose_name="Номер", unique=True)
-    printer = models.ForeignKey(PrinterModel, on_delete=models.CASCADE, verbose_name='Модель принтера')
-    model = models.ForeignKey(CatrigeModel, on_delete=models.CASCADE, verbose_name='Модель картриджа')
-
-    class Meta:
-        verbose_name = 'Совместимость картриджа'
-        verbose_name_plural = 'Совместимость картриджей'
-
-    def __str__(self):
-        return self.number
 
 
 

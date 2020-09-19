@@ -1,14 +1,17 @@
 from main.models import *
 from localization.models import *
 
-class PrinterModel(Models):
+class PrinterModel(models.Model):
+    name = models.CharField(max_length=100, verbose_name='Название модели принтера')
+    firm = models.ForeignKey(Firms, models.CASCADE, verbose_name='Фирма')
+    photo = models.ImageField(blank=True)
 
     class Meta:
         verbose_name = 'Модель принтера'
         verbose_name_plural = 'Модели принтеров'
 
     def __str__(self):
-        return self.model
+        return self.name
 
 class Status(models.Model):
     name = models.CharField(max_length=100, verbose_name='Статус')

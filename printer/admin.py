@@ -4,12 +4,11 @@ from printer.models import *
 
 @admin.register(PrinterModel)
 class FirmAdmin(admin.ModelAdmin):
-    list_display = ['model', 'firm']
-
+    pass
 
 @admin.register(Printer)
 class PrinterAdmin(admin.ModelAdmin):
-    list_display = ['category', 'serialNumber','modelProduct','status']
+    list_display = ['category', 'serialNumber','status']
 
 
 @admin.register(Category)
