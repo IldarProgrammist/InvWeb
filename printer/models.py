@@ -17,9 +17,6 @@ class PrinterModel(models.Model):
 
 
 
-
-
-
 class Status(models.Model):
     name = models.CharField(max_length=100, verbose_name='Статус')
 
