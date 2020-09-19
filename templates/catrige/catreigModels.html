@@ -8,12 +8,22 @@
 
 
     {% block content %}
+
         {% for c in ctModel %}
-           {{ c.name }}
+
+        <div class="container-fluid">
+
+          <p>{{ c.name }}</p>
            {{ c.color }}
            {{ c.firm }}
+
+        </div>
+
         {% endfor %}
+
+
     {% endblock %}
+
 
     {% block footer %}
          {% include 'footer.html' %}
