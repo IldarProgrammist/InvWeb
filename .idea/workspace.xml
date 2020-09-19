@@ -19,28 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/InvWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/InvWeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="исправлены модели CatrigeModel и PrinterModel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catrige/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catrige/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catrige/migrations/0002_remove_catriege_status.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catrige/migrations/0003_printercatrigecompatibility.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catrige/migrations/0004_auto_20200915_1647.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catrige/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0002_delete_status.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0003_auto_20200915_1647.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/printer/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/printer/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/printer/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/printer/migrations/0002_remove_printer_status.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/printer/migrations/0003_status.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/printer/migrations/0004_auto_20200913_1007.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/printer/migrations/0005_remove_printer_date.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/printer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/printer/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/catrige/catreigModels.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catrige/catreigModels.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600427880990</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="исправлены модели CatrigeModel и PrinterModel">
+      <created>1600504851416</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1600504851416</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -344,24 +332,26 @@
     <MESSAGE value="Link в Катриджах" />
     <MESSAGE value="url rooting Catrige" />
     <MESSAGE value="url rooting Catrigemodel" />
-    <option name="LAST_COMMIT_MESSAGE" value="url rooting Catrigemodel" />
+    <MESSAGE value="исправлены модели CatrigeModel и PrinterModel" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправлены модели CatrigeModel и PrinterModel" />
   </component>
   <component name="WindowStateProjectService">
     <state x="83" y="0" width="816" height="616" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600463749322">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="83" y="0" width="816" height="616" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1600463749322" />
-    <state x="326" y="57" key="CommitChangelistDialog2" timestamp="1600464265033">
+    <state x="326" y="0" key="CommitChangelistDialog2" timestamp="1600504849417">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="326" y="57" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1600464265033" />
+    <state x="326" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1600504849417" />
     <state x="2119" y="188" key="SettingsEditor" timestamp="1600176754542">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2119" y="188" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600176754542" />
-    <state x="2220" y="238" key="Vcs.Push.Dialog.v2" timestamp="1600355078132">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="202" y="105" key="Vcs.Push.Dialog.v2" timestamp="1600504864349">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="202" y="105" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600504864349" />
     <state x="2220" y="238" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600355078132" />
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600173112673">
       <screen x="1920" y="0" width="1920" height="1040" />
