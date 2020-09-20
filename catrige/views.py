@@ -1,23 +1,16 @@
 from django.shortcuts import render
-from django.views.generic import *
-from catrige.models import *
-from printer.models import *
+from django.views.generic import ListView
+
+from catrige.models import CatrigeModel
 
 
-def printSection(request):
-    return render(request,'catrige/carigeSpace.html')
-
-
-class CatrigeSectionView(ListView):
+class CatrigeInfoView(ListView):
     model = CatrigeModel
-    context_object_name = 'ctSection'
-    template_name = 'catrige/carigeSpace.html'
+    queryset = CatrigeModel.objects.all()
+    context_object_name = 'catrige'
+    template_name = 'catrige/catrige_info.html'
 
 
 
-# class CarigeModelView(ListView):
-#     model = CatrigeModel
-#     context_object_name = 'ctModel'
-#     template_name = 'catrige/catreigModels.html'
 
 

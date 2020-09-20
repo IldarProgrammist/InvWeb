@@ -1,30 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
- {% block  header%}
+   {% block  header%}
         {% include 'header.html' %}
     {% endblock %}
 
 
     {% block content %}
 
-        {% for c in ctModel %}
-
-        <div class="container-fluid">
-
-            {{ c.catrigeModel.name }}
-            {{ c.printerModel.name }}
-
-
-
-        </div>
-
-        {% endfor %}
-
 
     {% endblock %}
-
 
     {% block footer %}
          {% include 'footer.html' %}

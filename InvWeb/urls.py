@@ -6,7 +6,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('printer/', include('printer.urls')),
-    path('', include('catrige.urls')),
+    path('catrige/', include('catrige.urls')),
 
 
 ]
