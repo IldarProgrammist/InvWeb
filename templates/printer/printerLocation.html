@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block  header%}
+        {% include 'header.html' %}
+    {% endblock %}
+
+
+    {% block content %}
+
+        <div class="container">
+         <div class="row">
+                <h3 class="List-title">Место расположения принтеров</h3>
+
+
+
+                <table class="table">
+
+                    {% for prtinter in PrinterList %}
+
+                          <thead>
+                            <tr>
+                              <th>ID</th>
+                              <th>Серийный номер</th>
+                              <th>Модель принтера</th>
+                              <th>Титул</th>
+                              <th>Помещение</th>
+
+                            </tr>
+                          </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">{{ prtinter.id }}</th>
+                                  <td>{{ prtinter.serialNumber }}</td>
+                                  <td>{{ prtinter.printerModel.name }}</td>
+                                  <td>{{ prtinter.room.numberTitul }}</td>
+                                  <td>{{ prtinter.room.numberRoom }}</td>
+                                </tr>
+                              </tbody>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+            </div>
+
+
+    {% endblock %}
+
+    {% block footer %}
+         {% include 'footer.html' %}
+    {% endblock %}

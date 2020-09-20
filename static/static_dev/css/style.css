@@ -13,7 +13,6 @@ body {
 }
 
 
-
 .content, .header, .footer {
     box-sizing: border-box;
     padding: 20px;
@@ -53,6 +52,8 @@ body {
 }
 
 
+
+
 .zag{
     margin: 30px;
 }
@@ -68,3 +69,10 @@ a>navbar-brand{
     height: 250px;
 
 }
+
+.List-title{
+    margin-top: 25px;
+}
+
+
+
