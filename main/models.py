@@ -13,16 +13,7 @@ class Category(models.Model):
         return self.name
 
 
-class Firms(models.Model):
-    name = models.CharField(max_length=50, verbose_name='Фирма', unique=True)
-    slug = models.SlugField(unique=True)
 
-    class Meta:
-        verbose_name = 'Фирма'
-        verbose_name_plural = 'Фирмы'
-
-    def __str__(self):
-        return self.name
 
 
 class Products(models.Model):
