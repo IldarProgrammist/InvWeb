@@ -9,34 +9,11 @@
     {% block content %}
 
         <div class="container">
-            <div class="row">
-                <h3 class="List-title">Список принтеров</h3>
 
-                <table class="table">
 
-                    {% for prtinter in PrinterList %}
 
-                          <thead>
-                            <tr>
-                              <th>ID</th>
-                              <th>Серийный номер</th>
-                              <th>Модель принтера</th>
-                              <th>Статус</th>
-                              <th>Ip-адрес</th>
 
-                            </tr>
-                          </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">{{ prtinter.id }}</th>
-                                  <td>{{ prtinter.serialNumber }}</td>
-                                  <td>{{ prtinter.printerModel.name }}</td>
-                                  <td>{{ prtinter.status.name }}</td>
-                                  <td>{{ prtinter.ip }}</td>
-                                </tr>
-                              </tbody>
-                    {% endfor %}
-                </table>
+
             </div>
         </div>
 

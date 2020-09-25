@@ -28,7 +28,9 @@ INSTALLED_APPS = [
     'printer.apps.PrinterConfig',
     'main',
     'localization',
+    'import_export',
     'catrige',
+    'person',
 ]
 
 MIDDLEWARE = [

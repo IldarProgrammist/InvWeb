@@ -14,9 +14,9 @@ class FirmAdmin(admin.ModelAdmin):
 class ModelFirmAdmin(admin.ModelAdmin):
     list_display = ['firm','model']
 
-@admin.register(PtinterCatrige)
-class ModelFirmAdmin(admin.ModelAdmin):
-    list_display = ['printerModel','catrigeModel']
+# @admin.register(PtinterCatrige)
+# class ModelFirmAdmin(admin.ModelAdmin):
+#     list_display = ['printerModel','catrigeModel']
 
 
 

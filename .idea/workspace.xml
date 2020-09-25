@@ -19,15 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="добавление новой страницы для Catrige">
-      <change beforePath="$PROJECT_DIR$/.idea/InvWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/InvWeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="Удаление модель Firm из приложения main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InvWeb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/InvWeb/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printer/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/printer/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/printer/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/static_dev/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/static_dev/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/printer/PrinterList.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/PrinterList.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,19 +88,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\SiburAdmin\PycharmProjects\InvWeb\static\static_dev\img" />
-      <recent name="E:\Projects\python\django\InvWeb\static\static_dev\img" />
-      <recent name="D:\Projects\python\django\InvWeb\static\static_dev\img" />
-      <recent name="D:\Projects\python\django\InvWeb\static\static_dev\js" />
-      <recent name="D:\Projects\python\django\InvWeb\static\static_dev\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\SiburAdmin\PycharmProjects\InvWeb\templates\main" />
       <recent name="E:\Projects\python\django\InvWeb\static\static_dev\img" />
       <recent name="E:\Projects\python\django\InvWeb\static\static_dev\fonts" />
       <recent name="D:\Projects\python\django\InvWeb\static\static_dev\bootstrap\css" />
       <recent name="D:\Projects\python\django\InvWeb\static\static_dev\bootstrap\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SiburAdmin\PycharmProjects\InvWeb\static\static_dev\img" />
+      <recent name="E:\Projects\python\django\InvWeb\static\static_dev\img" />
+      <recent name="D:\Projects\python\django\InvWeb\static\static_dev\img" />
+      <recent name="D:\Projects\python\django\InvWeb\static\static_dev\js" />
+      <recent name="D:\Projects\python\django\InvWeb\static\static_dev\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -325,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600595709727</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Удаление модель Firm из приложения main">
+      <created>1600700543176</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1600700543176</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView">
@@ -371,7 +376,8 @@
     <MESSAGE value="Исправлена ошибка при добавлении в модель принтеров" />
     <MESSAGE value="исправлены Urls" />
     <MESSAGE value="добавление новой страницы для Catrige" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавление новой страницы для Catrige" />
+    <MESSAGE value="Удаление модель Firm из приложения main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Удаление модель Firm из приложения main" />
   </component>
   <component name="WindowStateProjectService">
     <state x="83" y="0" width="816" height="616" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600463749322">
@@ -394,15 +400,15 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2460" y="255" key="IDE.errors.dialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600686853047" />
-    <state x="553" y="233" key="SettingsEditor" timestamp="1600686741801">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2181" y="116" key="SettingsEditor" timestamp="1600958980542">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="553" y="233" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600686741801" />
-    <state x="202" y="105" key="Vcs.Push.Dialog.v2" timestamp="1600595864773">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="2181" y="116" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600958980542" />
+    <state x="2220" y="238" key="Vcs.Push.Dialog.v2" timestamp="1600700549211">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="202" y="105" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600595864773" />
-    <state x="2220" y="238" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600355078132" />
+    <state x="2220" y="238" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600700549211" />
     <state x="443" y="158" width="672" height="475" key="search.everywhere.popup" timestamp="1600619781966">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
