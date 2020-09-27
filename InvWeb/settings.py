@@ -30,7 +30,6 @@ INSTALLED_APPS = [
     'localization',
     'import_export',
     'catrige',
-    'person',
 ]
 
 MIDDLEWARE = [

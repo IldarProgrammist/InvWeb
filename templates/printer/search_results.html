@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+   {% block  header%}
+        {% include 'header.html' %}
+    {% endblock %}
+
+
+    {% block content %}
+        {% for printer in printers %}
+          <p>{{ printer.ip }} </p>
+
+        {% endfor %}
+        
+
+        <form action="{% url 'search_results' %}" method="get">
+            <input name="search" type="text" placeholder="Search...">
+        </form>
+
+
+
+    {% endblock %}
+
+    {% block footer %}
+         {% include 'footer.html' %}
+    {% endblock %}

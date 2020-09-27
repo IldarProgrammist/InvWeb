@@ -71,9 +71,15 @@ a>navbar-brand{
 }
 
 .List-title{
-    margin-top: 25px;
+    margin: 20px;
+    padding-left: 30px;
+    font-size: 20px;
 }
 
 
 
 
+.search-locationPrinter{
+    margin: 10px;
+    padding-left: 100px;
+}
