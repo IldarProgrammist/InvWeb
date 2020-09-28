@@ -83,3 +83,12 @@ a>navbar-brand{
     margin: 10px;
     padding-left: 100px;
 }
+
+.printerDitaleLink{
+
+}
+
+.printerDitaleLink:hover{
+  text-decoration: none;
+  color:red;
+}

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView
 from printer.models import *
 from django.db.models import Q
+from django.views.generic.detail import DetailView
 
 class PrinterInfoView(ListView):
     model = PtinterCatrige
@@ -12,19 +13,6 @@ class PrinterInfoView(ListView):
 
 
 
-class PrinterList(ListView):
-    model = Printer
-    queryset = Printer.objects.all()
-    context_object_name = 'PrinterList'
-    template_name = 'printer/PrinterList.html'
-
-
-
-class PrinterLocation(ListView):
-    model = Printer
-    queryset = Printer.objects.all()
-    context_object_name = 'PrinterList'
-    template_name = 'printer/printerLocation.html'
 
 def printerListView(request):
 
@@ -34,12 +22,11 @@ def printerListView(request):
     else:
         printer = Printer.objects.all()
 
-    return render(request,'printer/printerLocation.html', context={'printer_': printer})
+    return render(request,'printer/printerList.html', context={'printer_': printer})
 
 
 
 
-# class SearchPrinter(ListView):
-#     model = Printer
-#     template_name = 'printer/search_results.html'
-#     context_object_name = 'printers'
+class PrinterDetailView(DetailView):
+    model = Printer
+    template_name = 'printer/listDetail.html'

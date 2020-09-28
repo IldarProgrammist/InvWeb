@@ -9,17 +9,15 @@
     {% block content %}
 
 
-     <h3 class="List-title">Место расположения принтеров</h3>
+     <h3 class="List-title">Список принтеров</h3>
 
 
                 <div class="search-locationPrinter">
-                    <form action="{%  url 'printerLocation' %}" method="get"  class="form-inline md-form mr-auto mb-4">
+                    <form action="{%  url 'printerList' %}" method="get"  class="form-inline md-form mr-auto mb-4">
                         <input name="search"  class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                         <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
                     </form>
                 </div>
-
-
 
         <div class="container">
          <div class="row">
@@ -27,23 +25,20 @@
 
                           <thead>
                             <tr>
-                              <th>ID</th>
-                              <th>Серийный номер</th>
+                              <th> Серийный номер</th>
                               <th>Модель принтера</th>
-                              <th>Титул</th>
-                              <th>Помещение</th>
-
+                              <th>IP</th>
+                              <th>Статус</th>
                             </tr>
                           </thead>
                      {% for prtinter in printer_ %}
-
                               <tbody>
                                 <tr>
-                                  <th scope="row">{{ prtinter.id }}</th>
-                                  <td>{{ prtinter.serialNumber }}</td>
+                                  <td><a class="printerDitaleLink" href="#">{{ prtinter.serialNumber }}</a> </td>
+
                                   <td>{{ prtinter.printerModel.name }}</td>
-                                  <td>{{ prtinter.room.numberTitul }}</td>
-                                  <td>{{ prtinter.room.numberRoom }}</td>
+                                 <td>{{ prtinter.ip }}</td>
+                                     <td>{{ prtinter.status }}</td>
                                 </tr>
                               </tbody>
 
