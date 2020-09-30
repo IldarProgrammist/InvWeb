@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/InvWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/InvWeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/printer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/printer/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/printer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/printer/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/printer/listDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/listDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/printer/printerList.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/printerList.html" afterDir="false" />
-    </list>
+    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="добавлена детализация для модели Printer" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,7 +105,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599935910852</updated>
-      <workItem from="1601489440326" duration="3751000" />
+      <workItem from="1601489440326" duration="4100000" />
     </task>
     <task id="LOCAL-00001" summary="Добавление модели PrinterCatrigeCompatidility">
       <created>1599981199294</created>
@@ -207,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600109557666</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="добавлена детализация для модели Printer">
+      <created>1601496255170</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1601496255170</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -233,6 +231,7 @@
     <MESSAGE value="Создание главной страницы" />
     <MESSAGE value="создание файла requirements.txt" />
     <MESSAGE value="добавление  файла Catrige.html&#10;добавление  палели поиска в файле Catrige.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавление  файла Catrige.html&#10;добавление  палели поиска в файле Catrige.html" />
+    <MESSAGE value="добавлена детализация для модели Printer" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавлена детализация для модели Printer" />
   </component>
 </project>
