@@ -7,8 +7,31 @@
 
 
     {% block content %}
-        <h2>ИНформация</h2>
-            {{ object.serialNumber }}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                   <h3>Информация:</h3>
+                   <p>Категория: {{ printer.category.name }}</p>
+                   <p>Серийный номер: {{ printer.serialNumber }}</p>
+                   <p>Ip-адрес: {{ printer.ip }}</p>
+                   <p>Модель: {{ printer.printerModel.name }}</p>
+                   <p>Статус: {{ printer.status.name }}</p>
+                   <h3>Место расположения:</h3>
+                   <p>{{ printer.room.titul.titulName }}</p>
+                   <p>{{ printer.room.numberRoom }} </p>
+                </div>
+                <div class="col-sm"></div>
+
+                <div class="col-sm">
+
+
+                </div>
+  </div>
+</div>
+
+
+
 
     {% endblock %}
 

@@ -1,4 +1,5 @@
 from django.db.models import Q
+from django.http import Http404
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
@@ -22,10 +23,17 @@ def printerListView(request):
     return render(request, 'printer/printerList.html', context={'printer_': printer})
 
 
-class PrinterDetailView(DetailView):
-    template_name = 'printer/listDetail.html'
+def printerDetile(request,pk ):
+    prtinter = get_object_or_404(Printer, pk = pk)
+    return render(request, 'printer/listDetail.html',{'printer':prtinter})
 
 
-    def get_object(self):
-        id_ = self.kwargs.get("id")
-        return get_object_or_404(Printer, id=id_)
+
+
+
+
+#
+# class PrinterDetailView(DetailView):
+#     template_name = 'printer/listDetail.html'
+#
+

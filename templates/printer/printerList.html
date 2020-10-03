@@ -22,7 +22,6 @@
         <div class="container">
          <div class="row">
                 <table class="table">
-
                           <thead>
                             <tr>
                               <th> Серийный номер</th>
@@ -34,7 +33,7 @@
                      {% for prtinter in printer_ %}
                               <tbody>
                                 <tr>
-                                  <td><a class="printerDitaleLink" href="#">{{ prtinter.serialNumber }}</a> </td>
+                                  <td><a class="printerDitaleLink" href="{% url 'printer_detail' pk=prtinter.pk %}">{{ prtinter.serialNumber }}</a> </td>
 
                                   <td>{{ prtinter.printerModel.name }}</td>
                                  <td>{{ prtinter.ip }}</td>
