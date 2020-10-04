@@ -11,22 +11,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm">
+                  <div class="margin_detile">
                    <h3>Информация:</h3>
-                   <p>Категория: {{ printer.category.name }}</p>
-                   <p>Серийный номер: {{ printer.serialNumber }}</p>
-                   <p>Ip-адрес: {{ printer.ip }}</p>
-                   <p>Модель: {{ printer.printerModel.name }}</p>
-                   <p>Статус: {{ printer.status.name }}</p>
+                   <p><strong>Категория:</strong>  {{ printer.category.name }}</p>
+                   <p><strong>Серийный номер:</strong>  {{ printer.serialNumber }}</p>
+                   <p><strong>Ip-адрес:</strong> {{ printer.ip }}</p>
+                   <p><strong>Модель:</strong> {{ printer.printerModel.name }}</p>
+                   <p><strong>Статус:</strong>  {{ printer.status.name }}</p>
                    <h3>Место расположения:</h3>
-                   <p>{{ printer.room.titul.titulName }}</p>
-                   <p>{{ printer.room.numberRoom }} </p>
+                   <p><strong>Зона</strong> {{ printer.room.titul.titulName }}  </p>
+                   <p><strong>Кабинет: </strong> {{ printer.room.numberRoom }} </p>
                 </div>
-                <div class="col-sm"></div>
-
+                </div>
                 <div class="col-sm">
-
-
+                     {%  if printer.printerModel.photo %}
+                        <img  class="img-printer_detile" src="{{ printer.printerModel.photo.url }}"  alt="...">
+                     {% else %}
+                        <img  src="{% static 'img/print.png' %}" class="card-img" alt="...">
+                     {% endif %}
                 </div>
+
+
   </div>
 </div>
 

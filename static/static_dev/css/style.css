@@ -12,7 +12,6 @@ body {
     flex-direction: column;
 }
 
-
 .content, .header, .footer {
     box-sizing: border-box;
     padding: 20px;
@@ -91,4 +90,13 @@ a>navbar-brand{
 .printerDitaleLink:hover{
   text-decoration: none;
   color:red;
+}
+
+.margin_detile{
+    margin: 30px;
+}
+.img-printer_detile{
+    margin: 20px;
+    height: 412px;
+    width: 412px;
 }
