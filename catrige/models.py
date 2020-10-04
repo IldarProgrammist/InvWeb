@@ -46,6 +46,7 @@ class Catriege(Products):
     model = models.ForeignKey(CatrigeModel, models.CASCADE, verbose_name='Модель картриджа')
     status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус')
     date = models.DateField()
+
     class Meta:
         verbose_name = 'Картридж'
         verbose_name_plural = 'Картриджи'

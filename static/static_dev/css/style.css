@@ -51,8 +51,6 @@ body {
 }
 
 
-
-
 .zag{
     margin: 30px;
 }
@@ -106,4 +104,8 @@ a>navbar-brand{
     width:  400px;
     margin-bottom: 20px;
 
+}
+
+ .zag_refueling{
+    padding-left: 40px;
 }
