@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+   {% block  header%}
+        {% include 'header.html' %}
+    {% endblock %}
+
+
+    {% block content %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                  <div class="margin_detile">
+
+                   <h3>Информация:</h3>
+                   <p><strong>Категория:</strong> {{catrige.category.name }}</p>
+                   <p><strong>Серийный номер:</strong>  {{ catrige.serialNumber }}</p>
+                   <p><strong>Модель картриджа:</strong> {{ catrige.model.name }}</p>
+                    <p><strong>Цвет картриджа:</strong> {{ catrige.model.color.name }}</p>
+                   <p><strong>Статус:</strong>  {{ catrige.status.name }}</p>
+                </div>
+                </div>
+                <div class="col-sm">
+                     {%  if catrige.model.fhoto %}
+                        <img class="img-printer_detile" src="{{ catrige.model.fhoto.url }}"  alt="...">
+                     {% else %}
+                        <img  src="{% static 'img/catrige.png' %}" class="card-img" alt="...">
+                     {% endif %}
+                </div>
+
+
+  </div>
+</div>
+
+
+    {% endblock %}
+
+    {% block footer %}
+         {% include 'footer.html' %}
+    {% endblock %}

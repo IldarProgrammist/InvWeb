@@ -1,6 +1,7 @@
+from django.db.models import Q
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView
-from catrige.models import CatrigeModel
-
+from catrige.models import *
 
 class CatrigeInfoView(ListView):
     model = CatrigeModel
@@ -10,5 +11,15 @@ class CatrigeInfoView(ListView):
 
 
 
+def catrigeListView(request):
+    searchQwery = request.GET.get('search', '')
+    if searchQwery:
+        catrige = Catriege.objects.filter(Q(serialNumber__contains=searchQwery))
+    else:
+        catrige = Catriege.objects.all()
+    return render(request, 'catrige/catrigeList.html', context={'catrige': catrige})
 
 
+def catrigeDetile(request,pk ):
+    catrige = get_object_or_404(Catriege, pk = pk)
+    return render(request, 'catrige/listDetile.html',{'catrige': catrige})

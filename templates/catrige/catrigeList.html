@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block  header%}
+        {% include 'header.html' %}
+    {% endblock %}
+
+    {% block content %}
+
+
+     <h3 class="List-title">Список картриджей</h3>
+
+                <div class="search-locationPrinter">
+                    <form action="{%  url 'printerList' %}" method="get"  class="form-inline md-form mr-auto mb-4">
+                        <input name="search"  class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
+                    </form>
+                </div>
+
+        <div class="container">
+         <div class="row">
+                <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Серийный номер</th>
+                              <th>Модель картриджа</th>
+                              <th>Цвет картриджа</th>
+                              <th>Статус</th>
+                            </tr>
+                          </thead>
+
+                     {% for c in catrige %}
+                              <tbody>
+                                <tr>
+                                  <td> <a href="{% url 'catrige_detail' pk=c.pk %}">{{ c.serialNumber }}</a> </td>
+                                  <td>{{ c.model.name }}</td>
+                                  <td>{{ c.model.color.name }}</td>
+                                  <td>{{ c.status.name }}</td>
+
+                                </tr>
+                              </tbody>
+
+                    {% endfor %}
+                </table>
+
+            </div>
+        </div>
+            </div>
+
+
+    {% endblock %}
+
+    {% block footer %}
+         {% include 'footer.html' %}
+    {% endblock %}
