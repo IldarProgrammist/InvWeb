@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'localization',
     'import_export',
     'catrige',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -113,4 +114,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 
+LOGIN_REDIRECT_URL = '/home/'
 

@@ -1,13 +1,14 @@
 from django.shortcuts import render
-from django.views.generic import *
+from django.views.generic import TemplateView
 
-from main.models import Category
-
-
-class HomeView(ListView):
+class HomeViews(TemplateView):
    template_name = 'main/index.html'
-   queryset = Category
+
+
+class MainView(TemplateView):
+   template_name = 'main/index.html'
 
 
 def pintView(request):
    return render(request, 'main/print.html')
+

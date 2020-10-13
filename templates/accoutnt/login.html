@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+   {% block  header%}
+        {% include 'header.html' %}
+    {% endblock %}
+
+
+    {% block content %}
+
+                 <h2>Login</h2>
+          <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+          </form>
+
+
+
+
+
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                 <form action="login" method="post">#}
+{#                     {% csrf_token %}#}
+{#                 <input type="text" name="username" placeholder="Введите логин"> {% csrf_token %}#}
+{#                <input type="password" name="password", placeholder="Введите пароль">#}
+{#                     <button type="submit" class="btn btn-outline-dark">Вход в систему</button>#}
+{#            </form>#}
+{##}
+{#                </div>#}
+{#            </div>#}
+
+
+
+    {% endblock %}
+
+    {% block footer %}
+         {% include 'footer.html' %}
+    {% endblock %}

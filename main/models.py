@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 
@@ -14,11 +15,15 @@ class Category(models.Model):
 
 
 
-
-
 class Products(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория оборудования')
     serialNumber = models.CharField(max_length=40, verbose_name='Серийный номер', unique=True)
 
     class Meta:
         abstract = True
+
+
+
+
+
+
