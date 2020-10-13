@@ -115,4 +115,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 
 LOGIN_REDIRECT_URL = '/home/'
+LOGIN_URL = '/'
 
