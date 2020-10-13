@@ -8,7 +8,6 @@
 
     {% block content %}
 
-
      <h3 class="List-title">Список принтеров</h3>
 
 
@@ -27,6 +26,8 @@
                               <th> Серийный номер</th>
                               <th>Модель принтера</th>
                               <th>IP</th>
+
+                              <th>Место расположения</th>
                               <th>Статус</th>
                             </tr>
                           </thead>
@@ -35,9 +36,13 @@
                                 <tr>
                                   <td><a class="printerDitaleLink" href="{% url 'printer_detail' pk=prtinter.pk %}">{{ prtinter.serialNumber }}</a> </td>
 
-                                  <td>{{ prtinter.printerModel.name }}</td>
-                                 <td>{{ prtinter.ip }}</td>
-                                     <td>{{ prtinter.status }}</td>
+                                     <td>{{ prtinter.printerModel.name }}</td>
+                                     <td>{{ prtinter.ip }}</td>
+
+                                     <td>{{ prtinter.room.titul.titulName }}</td>
+
+
+                                    <td>{{ prtinter.status }}</td>
                                 </tr>
                               </tbody>
 

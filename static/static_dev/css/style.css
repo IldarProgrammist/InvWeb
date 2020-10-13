@@ -168,3 +168,16 @@ input[type=submit] {
     color: #5a6268;
     font-size: 18px;
 }
+.Link_login{
+    color: #1b1e21;
+}
+
+.Link_login:hover{
+    text-decoration: none;
+    color: red;
+}
+
+#logo{
+
+}
+

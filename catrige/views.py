@@ -1,17 +1,20 @@
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView
 from catrige.models import *
 
-
-class CatrigeInfoView(ListView):
-    model = CatrigeModel
-    queryset = CatrigeModel.objects.all()
-    context_object_name = 'catrige'
-    template_name = 'catrige/catrige_info.html'
+@login_required
+def refuelingCatrigeListView(request):
+    refueling = Catriege.objects.filter(status__name='На заправку')
+    return render(request,'catrige/refuelingCatrigeList.html', {'refueling': refueling} )
 
 
+@login_required
+def catrigeInfoView(request):
+    return render(request, 'catrige/catrige_info.html')
 
+
+@login_required
 def catrigeListView(request):
     searchQwery = request.GET.get('search', '')
     if searchQwery:
@@ -21,16 +24,14 @@ def catrigeListView(request):
     return render(request, 'catrige/catrigeList.html', context={'catrige': catrige})
 
 
+@login_required
 def catrigeDetile(request, pk):
     catrige = get_object_or_404(Catriege, pk=pk)
     return render(request, 'catrige/listDetile.html', {'catrige': catrige})
 
 
-class RefuelingCatrigeListView(ListView):
-    model = Catriege
-    queryset =Catriege.objects.filter(status__name='На заправку')
-    template_name = 'catrige/refuelingCatrigeList.html'
-    context_object_name = 'refueling'
+
+
 
 
 
