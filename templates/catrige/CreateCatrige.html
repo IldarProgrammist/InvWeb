@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+   {% block  header%}
+        {% include 'header.html' %}
+    {% endblock %}
+
+    {% block content %}
+         <h1>Добавить картридж</h1>
+        <div class="container">
+            <div class="row">
+
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+
+                    <button type="button" class="btn btn-outline-secondary">Добавить</button>
+
+
+
+            </div>
+        </div>
+
+
+    {% endblock %}
+
+    {% block footer %}
+         {% include 'footer.html' %}
+    {% endblock %}
