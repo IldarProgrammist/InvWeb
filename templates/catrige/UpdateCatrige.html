@@ -6,18 +6,18 @@
     {% endblock %}
 
     {% block content %}
-         <h1>Добавить картридж</h1>
+         <h1>Редактировать картридж</h1>
         <div class="container">
             <div class="row">
 
-                <form method="POST">
+                <form method="post">
                     <div class="form-group">
 
                         {% csrf_token %}
                         {{ form.as_p }}
                     </div>
 
-                    <button  type="submit" class="btn btn-outline-secondary">Сохранить</button>
+                    <button type="submit" class="btn btn-outline-secondary">Сохранить</button>
 
                 </form>
 

@@ -2,7 +2,10 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
 from catrige.models import *
-from django.views.generic import  CreateView
+from django.views.generic import CreateView, UpdateView
+from .forms import CatrigeForm, CatrigeUpdateStatusForm
+
+
 @login_required
 def refuelingCatrigeListView(request):
     refueling = Catriege.objects.filter(status__name='На заправку')
@@ -33,9 +36,23 @@ def catrigeDetile(request, pk):
 
 class AddCatrigeView(CreateView):
     model = Catriege
+    form_class =  CatrigeForm
     template_name = 'catrige/CreateCatrige.html'
-    fields = '__all__'
+    # fields = '__all__'
 
+
+class UppdateCatrige(UpdateView):
+    model = Catriege
+    form_class = CatrigeForm
+    template_name = 'catrige/UpdateCatrige.html'
+    # fields = '__all__'
+
+
+
+class EditStatusCatrige(UpdateView):
+    model = Catriege
+    form_class = CatrigeUpdateStatusForm
+    template_name = 'catrige/UpdateCatrige.html'
 
 
 

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="Доступ для зарегестрированных&#10;Запрет на все страницы">
-      <change afterPath="$PROJECT_DIR$/catrige/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/catrige/CreateCatrige.html" afterDir="false" />
+    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="Добавление формы для Добавления Картриджа">
+      <change afterPath="$PROJECT_DIR$/templates/catrige/UpdateCatrige.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catrige/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catrige/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catrige/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catrige/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/catrige/CreateCatrige.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catrige/CreateCatrige.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/catrige/catrigeList.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catrige/catrigeList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/catrige/listDetile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catrige/listDetile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +55,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/static_dev/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/catrige" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -63,11 +66,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SiburAdmin\PycharmProjects\InvWeb\templates\catrige" />
       <recent name="C:\Users\SiburAdmin\PycharmProjects\InvWeb\static\static_dev\fonts" />
       <recent name="C:\Users\SiburAdmin\PycharmProjects\InvWeb\templates\registration" />
       <recent name="D:\Projects\python\django\InvWeb\static\static_dev\img" />
       <recent name="D:\Projects\python\django\InvWeb\static\static_dev\js" />
-      <recent name="D:\Projects\python\django\InvWeb\static\static_dev\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\SiburAdmin\PycharmProjects\InvWeb\templates\accoutnt" />
@@ -113,7 +116,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599935910852</updated>
-      <workItem from="1602603603155" duration="11793000" />
+      <workItem from="1602603603155" duration="18687000" />
     </task>
     <task id="LOCAL-00001" summary="Добавление модели PrinterCatrigeCompatidility">
       <created>1599981199294</created>
@@ -227,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602614774275</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Добавление формы для Добавления Картриджа">
+      <created>1602656682320</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1602656682321</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -259,17 +269,18 @@
     <MESSAGE value="Создана авторизация пользователя на сайте" />
     <MESSAGE value="Доступ для зарегестрированных" />
     <MESSAGE value="Доступ для зарегестрированных&#10;Запрет на все страницы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Доступ для зарегестрированных&#10;Запрет на все страницы" />
+    <MESSAGE value="Добавление формы для Добавления Картриджа" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление формы для Добавления Картриджа" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1602614772954">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1602656681053">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1602614772954" />
-    <state x="275" y="117" key="Vcs.Push.Dialog.v2" timestamp="1602614780658">
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1602656681053" />
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2" timestamp="1602656687306">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1602614780658" />
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1602656687306" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1602570520575">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

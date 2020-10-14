@@ -1,3 +1,5 @@
+from django.urls import reverse
+
 from main.models import *
 from printer.models import *
 from main.models import *
@@ -45,7 +47,7 @@ class Status(models.Model):
 class Catriege(Products):
     model = models.ForeignKey(CatrigeModel, models.CASCADE, verbose_name='Модель картриджа')
     status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус')
-    date = models.DateField()
+    date = models.DateField(auto_now_add=True)
 
     class Meta:
         verbose_name = 'Картридж'
@@ -54,6 +56,8 @@ class Catriege(Products):
     def __str__(self):
         return self.serialNumber
 
+    def get_absolute_url(self):
+        return reverse('catrigeList')
 
 
 
