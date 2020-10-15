@@ -58,7 +58,7 @@ class CreateCatrigeView(CreateView):
     model = Catriege
     form_class =  CatrigeForm
     template_name = 'catrige/CreateCatrige.html'
-    # fields = '__all__'
+
 
 
 class UppdateCatrige(UpdateView):

@@ -9,7 +9,7 @@
 
             <div class="container"></div>
         <div class="container">
-            <h3 class="List-title">Список картриджей</h3>
+            <h3 class="List-title">Список картриджей на заправку</h3>
                 <h5>Общее колличество: {{ refueling.count }} </h5>
          <div class="row">
                 <table class="table">
@@ -25,7 +25,7 @@
                      {% for c in refueling %}
                               <tbody>
                                 <tr>
-                                  <td> <a href="{% url 'catrige_detail' pk=c.pk %}">{{ c.serialNumber }}</a> </td>
+                                  <td> <a class="Link_header" href="{% url 'catrige_detail' pk=c.pk %}">{{ c.serialNumber }}</a> </td>
                                   <td>{{ c.model.name }}</td>
                                   <td>{{ c.model.color.name }}</td>
                                   <td>{{ c.status.name }}</td>

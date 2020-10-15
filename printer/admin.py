@@ -14,10 +14,6 @@ class FirmAdmin(admin.ModelAdmin):
 class ModelFirmAdmin(admin.ModelAdmin):
     list_display = ['firm','model']
 
-# @admin.register(PtinterCatrige)
-# class ModelFirmAdmin(admin.ModelAdmin):
-#     list_display = ['printerModel','catrigeModel']
-
 
 
 class PrinterChoiceField(forms.ModelChoiceField):
@@ -25,16 +21,12 @@ class PrinterChoiceField(forms.ModelChoiceField):
 
 @admin.register(Printer)
 class PrinterAdmin(admin.ModelAdmin):
-    list_display = ['serialNumber', 'category', 'status']
+    list_display = ['serialNumber', 'category', 'status', 'date_now']
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == 'category':
             return PrinterChoiceField(Category.objects.filter(slug='printer'))
         return super().formfield_for_foreignkey(db_field, request, **kwargs)
-
-
-
-
 
 @admin.register(Status)
 class StatusAdmin(admin.ModelAdmin):

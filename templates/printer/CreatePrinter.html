@@ -6,23 +6,20 @@
     {% endblock %}
 
     {% block content %}
-
         <div class="container">
             <div class="row">
 
-                <div class="wrap_delete">
                 <form method="POST">
                     <div class="form-group">
+
                         {% csrf_token %}
+                       {{ form.as_p }}
 
                     </div>
-                 <p class="message">Вы действительно хотите удалить картридж с серийным номером {{ catriege.serialNumber }}?
-                         <button  type="submit" class="btn btn-outline-secondary">Удалить</button>
-                 </p>
+
+                    <button  type="submit" class="btn btn-outline-secondary">Сохранить</button>
 
                 </form>
-                </div>
-
 
             </div>
         </div>
