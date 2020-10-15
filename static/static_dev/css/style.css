@@ -70,7 +70,8 @@ a>navbar-brand{
 .List-title{
     margin: 20px;
     padding-left: 30px;
-    font-size: 20px;
+    font-size: 28px;
+    color: red;
 }
 
 
@@ -81,9 +82,7 @@ a>navbar-brand{
     padding-left: 100px;
 }
 
-.printerDitaleLink{
 
-}
 
 .printerDitaleLink:hover{
   text-decoration: none;
@@ -191,4 +190,10 @@ input[type=submit] {
 .wrap-search{
     width: 50%;
     margin: 50px auto;
+}
+
+
+.count{
+    padding-top: 15px;
+    font-size: 24px;
 }

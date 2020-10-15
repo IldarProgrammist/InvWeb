@@ -7,26 +7,24 @@
 
     {% block content %}
 
-
      <h3 class="List-title">Список картриджей</h3>
+     <div class="container">
+         <div class="row">
+        <div class="col"><p class="count">Общее колличество: {{ catrige.count }}</p> </div>
+        <div class="col"></div>
+    <div class="col">
 
+     <nav class="navbar navbar-light">
+         <form action="{%  url 'catrigeList' %}" method="get" class="form-inline">
+             <input  name="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+         </form>
+     </nav>
+    </div>
+  </div>
+</div>
 
-
-
-                <div class="search-locationPrinter">
-                    <form action="{%  url 'catrigeList' %}" method="get"  class="form-inline md-form mr-auto mb-4">
-                        <input class="form-control mr-sm-2" name="search"   type="text"  aria-label="Search">
-                        <button  class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit">Найти</button>
-                    </form>
-                </div>
-
-
-
-
-            <div class="container"></div>
         <div class="container">
-
-                <h4>Общее колличество: {{ catrige.count }} </h4>
  <a class="Link_login" href="{% url 'add_catrege' %}">Добавить картридж </a>
          <div class="row">
                 <table class="table">
@@ -42,13 +40,12 @@
                      {% for c in catrige %}
                               <tbody>
                                 <tr>
-                                  <td> <a href="{% url 'catrige_detail' pk=c.pk %}">{{ c.serialNumber }}</a> </td>
+                                  <td> <a class="Link_login" href="{% url 'catrige_detail' pk=c.pk %}">{{ c.serialNumber }}</a> </td>
                                   <td>{{ c.model.name }}</td>
                                   <td>{{ c.model.color.name }}</td>
                                   <td>{{ c.status.name }}</td>
                                 </tr>
                               </tbody>
-
                     {% endfor %}
                 </table>
             </div>
