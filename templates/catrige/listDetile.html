@@ -13,13 +13,23 @@
                 <div class="col-sm">
                   <div class="margin_detile">
 
-                   <h3>Информация:<a class="Link_login" href="{% url 'update_catrige' catrige.pk %}"><small>(ред.)</small></a></h3>
+
+
+
+                   <h3>Информация:<a class="Link_login" href="{%  url 'update_catrige' catrige.pk  %}"><small>(ред.)</small></a>
+                        <a class="Link_login" href=" {% url 'delete_catrige' catrige.pk %}"><small>(удалить)</small></a>
+
+                   </h3>
                    <p><strong>Категория:</strong> {{catrige.category.name }}</p>
                    <p><strong>Серийный номер:</strong>  {{ catrige.serialNumber }}</p>
                    <p><strong>Модель картриджа:</strong> {{ catrige.model.name }}</p>
                     <p><strong>Цвет картриджа:</strong> {{ catrige.model.color.name }}</p>
                    <p><strong>Статус:</strong>  {{ catrige.status.name }}<a class="Link_login" href="{% url 'update_catrige_status' catrige.pk %}"><small>(ред.)</small></a> </p>
-                </div>
+
+
+
+
+                  </div>
                 </div>
                 <div class="col-sm">
                      {%  if catrige.model.fhoto %}

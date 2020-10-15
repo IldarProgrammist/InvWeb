@@ -181,3 +181,14 @@ input[type=submit] {
 
 }
 
+.message{
+   margin: 24px;
+}
+
+.wrap_delete{
+    margin-top: 20px;
+}
+.wrap-search{
+    width: 50%;
+    margin: 50px auto;
+}

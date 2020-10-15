@@ -1,8 +1,11 @@
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.http import request
 from django.shortcuts import render, get_object_or_404
+from django.urls import reverse_lazy
+
 from catrige.models import *
-from django.views.generic import CreateView, UpdateView
+from django.views.generic import CreateView, UpdateView, DeleteView, TemplateView, DetailView, ListView
 from .forms import CatrigeForm, CatrigeUpdateStatusForm
 
 
@@ -12,13 +15,12 @@ def refuelingCatrigeListView(request):
     return render(request,'catrige/refuelingCatrigeList.html', {'refueling': refueling} )
 
 
-@login_required
-def catrigeInfoView(request):
-    return render(request, 'catrige/catrige_info.html')
+class CatrigeInfo(TemplateView):
+    template_name = 'catrige/catrige_info.html'
 
 
 @login_required
-def catrigeListView(request):
+def catrigeSearchView(request):
     searchQwery = request.GET.get('search', '')
     if searchQwery:
         catrige = Catriege.objects.filter(Q(serialNumber__contains=searchQwery))
@@ -27,14 +29,32 @@ def catrigeListView(request):
     return render(request, 'catrige/catrigeList.html', context={'catrige': catrige})
 
 
-@login_required
-def catrigeDetile(request, pk):
-    catrige = get_object_or_404(Catriege, pk=pk)
-    return render(request, 'catrige/listDetile.html', {'catrige': catrige})
 
 
 
-class AddCatrigeView(CreateView):
+class CatrigeListView(ListView):
+    model = Catriege
+    queryset = Catriege.objects.all()
+    template_name = 'catrige/catrigeList.html'
+    context_object_name = 'catrige'
+
+class CatrigeSearch(ListView):
+    model = Catriege
+    template_name = 'catrige/catrigeList.html'
+
+    def get_queryset(self):
+        searchQwery = request.GET.get('search', '')
+        return Catriege.objects.filter(Q(serialNumber__contains=searchQwery))
+
+
+class CatrigeDetile(DetailView):
+    model = Catriege
+    queryset = Catriege.objects.all()
+    template_name = 'catrige/listDetile.html'
+    context_object_name = 'catrige'
+
+
+class CreateCatrigeView(CreateView):
     model = Catriege
     form_class =  CatrigeForm
     template_name = 'catrige/CreateCatrige.html'
@@ -56,3 +76,7 @@ class EditStatusCatrige(UpdateView):
 
 
 
+class DeleteCatrige(DeleteView):
+    model = Catriege
+    template_name = 'catrige/DeleteCatrige.html'
+    success_url =  reverse_lazy('catrigeList')
