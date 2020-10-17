@@ -41,6 +41,7 @@ class ModelFirm(models.Model):
         return "{} {}".format(self.firm.name, self.model.name)
 
 
+
 class PtinterCatrige(models.Model):
     number = models.IntegerField(verbose_name='Номер', unique=True)
     printerModel = models.ForeignKey(PrinterModel, models.CASCADE, verbose_name='Модель принтера')

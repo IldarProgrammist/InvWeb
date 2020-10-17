@@ -9,34 +9,58 @@
     {% block content %}
 
         <div class="container">
-
             <div class="row">
 
-                  <div class="col">
-                       <a href="#"> <img class="img-wrapper" src="{% static 'img/pc_.png' %}"></a>
-                            <a class="link_wrap" href="#">Рабочие места</a>
+
+                <div class="col">
+                     <a href="#"> <img class="img-wrapper" src="{% static 'img/pc-computer-with-monitor_icon-icons.com_56249.png' %}"></a>
+
+                  <div class="container">
+                        <div class="row">
+                             <div class="col-sm">
+                                <div class="link_img"> <a class="link_in_img" href="#">Рабочие места</a></div>
+                             </div>
+                        </div>
                   </div>
+                </div>
 
-                  <div class="col">
-                       <a href="#"><img class="img-wrapper" src="{% static 'img/per.png' %}"></a>
-                            <a class="link_wrap" href="#">Пользователи</a>
+
+                 <div class="col">
+                      <a href="#"><img class="img-wrapper" src="{% static 'img/groups_users_people_4517.png' %}"></a>
+
+                  <div class="container">
+                        <div class="row">
+                             <div class="col-sm">
+                                <div class="link_img"> <a class="link_in_img" href="#">Сотрудники</a></div>
+                             </div>
+                        </div>
                   </div>
+                </div>
 
+                   <div class="col">
+                      <a href="{% url 'print' %}"><img class="img-wrapper" src="{% static 'img/print-printer-tool-with-printed-paper-outlined-symbol_icon-icons.com_57772.png' %}"></a>
 
-
-                  <div class="col">
-                         <a  href="{% url 'print' %}"><img class="img-wrapper" src="{% static 'img/print.png' %}"></a>
-                            <a class="link_wrap" href='print'>Печать</a>
+                  <div class="container">
+                        <div class="row">
+                             <div class="col-sm">
+                                <div class="link_img"> <a id="link_in_img"  class="link_in_img" href="{% url 'print' %}">Печать</a></div>
+                             </div>
+                        </div>
                   </div>
-                  <div class="col">
-                       <a  href="#"><img class="img-wrapper" src="{% static 'img/book.png' %}"></a>
-                            <a class="link_wrap" href="#">База знаний</a>
-                  </div>
+                </div>
+                <div class="col-sm">
+                     <a  href="#"><img class="img-wrapper" src="{% static 'img/teacherreading_89190.png' %}"></a>
 
+                     <div class="container">
+                        <div class="row">
+                             <div class="col-sm">
+                                <div class="link_img">  <a class="link_in_img" href="#">База знаний</a></div>
+                             </div>
+                        </div>
+                  </div>
+                </div>
             </div>
-        </div>
-
-        </div>
+            </div>
 
 
     {% endblock %}

@@ -7,30 +7,39 @@
 
 
     {% block content %}
-
-        <div class="container">
-
+         <div class="container">
             <div class="row">
 
-                  <div class="col">
-                       <a href="{% url 'catrigeList' %}"> <img class="img-catrige" src="{% static 'img/list.png' %}"></a>
-                            <a class="link_wrap" href="{% url 'catrigeList' %}">Список картриджей</a>
-                  </div>
 
-                  <div class="col">
-                       <a href="{% url 'refueling' %}"><img class="img-catrige" src="{% static 'img/zap.png' %}"></a>
-                            <a class="link_wrap" href="{% url 'refueling' %}">На заправку</a>
-                  </div>
+                 <div class="col">
+                      <a href="{% url 'catrigeList' %}"><img id="img_title" class="img-wrapper" src="{% static 'img/list-1_icon-icons.com_58876.png' %}"></a>
 
-                    <div class="col">
-                       <a href="#"><img class="img-catrige" src="{% static 'img/zap.png' %}"></a>
-                            <a class="link_wrap" href="#">На заправку</a>
+                  <div class="container">
+                        <div class="row">
+                             <div class="col-sm">
+                                <div class="link_img"> <a class="link_in_img" href="{% url 'catrigeList' %}">Список картриджей</a></div>
+                             </div>
+                        </div>
                   </div>
+                </div>
+
+
+                          <div class="col">
+                      <a href="{% url 'refueling' %}"><img class="img-wrapper" src="{% static 'img/ink-interface-symbol-of-drop-outline_icon-icons.com_73236.png' %}"></a>
+
+                  <div class="container">
+                        <div class="row">
+                             <div class="col-sm">
+                                <div class="link_img"> <a class="link_in_img" href="{% url 'refueling' %}">На заправку</a></div>
+                             </div>
+                        </div>
+                  </div>
+                </div>
 
             </div>
         </div>
 
-        </div>
+
 
 
     {% endblock %}

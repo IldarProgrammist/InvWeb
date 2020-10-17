@@ -36,7 +36,7 @@
 
                               <th>Место расположения</th>
                               <th>Статус</th>
-                                <th>Дата изменения</th>
+
                             </tr>
                           </thead>
                      {% for prtinter in printer_ %}
@@ -45,11 +45,11 @@
                                   <td><a class="Link_login" href="{% url 'printer_detail' pk=prtinter.pk %}">{{ prtinter.serialNumber }}</a> </td>
 
                                      <td>{{ prtinter.printerModel.name }}</td>
-                                     <td>{{ prtinter.ip }}</td>
+
+                                    <td>{{ prtinter.ip }}</td>
 
                                      <td>{{ prtinter.room.titul.titulName }}</td>
                                     <td>{{ prtinter.status }}</td>
-                                     <td>{{ prtinter.date_now }}</td>
                                 </tr>
                               </tbody>
 
