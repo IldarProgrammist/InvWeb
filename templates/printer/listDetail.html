@@ -16,10 +16,20 @@
                    <p><strong>Серийный номер:</strong>  {{ printer.serialNumber }}</p>
                    <p><strong>Ip-адрес:</strong> {{ printer.ip }}</p>
                    <p><strong>Модель:</strong> {{ printer.printerModel.name }}</p>
+                   <p><strong>Фирма:</strong> {{ printer.printerModel.firm.name }}</p>
                    <p><strong>Статус:</strong>  {{ printer.status.name }}<a class="Link_login" href="{% url 'update_printer_status' printer.pk %}"><small>(ред.)</small></a></p>
                    <h3>Место расположения:</h3>
                    <p><strong>Зона:</strong> {{ printer.room.titul.titulName }}  </p>
                    <p><strong>Кабинет: </strong> {{ printer.room.numberRoom }} </p>
+
+
+
+                    {% for pc in printerCatrige %}
+                        {{ pc.catrige.name }}
+                    {% endfor %}
+
+
+
                 </div>
                 </div>
                 <div class="col-sm">

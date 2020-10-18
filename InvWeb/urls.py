@@ -8,7 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('account.urls')),
     path('', include('main.urls')),
-    path('printer/', include('printer.urls')),
+    path('printer/', include('printers.urls')),
     path('catrige/', include('catrige.urls')),
 ]
 

@@ -1,7 +1,5 @@
 from django.urls import reverse
-
 from main.models import *
-from printer.models import *
 from main.models import *
 from django.contrib.contenttypes.models import ContentType
 

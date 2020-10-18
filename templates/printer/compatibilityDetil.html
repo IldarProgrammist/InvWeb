@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+   {% block  header%}
+        {% include 'header.html' %}
+    {% endblock %}
+
+    {% block content %}
+         {% for cp in printerCatrige.catrige.all %}
+                 <div class="container">
+                     <div class="row">
+                         <div class="col-sm">
+                              {{ cp }}
+
+                         </div>
+                     </div>
+                 </div>
+         {% endfor %}
+    {% endblock %}
+
+    {% block footer %}
+         {% include 'footer.html' %}
+    {% endblock %}
