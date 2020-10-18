@@ -10,8 +10,8 @@ urlpatterns = [
     path('create/', login_required(CreatePrinterView.as_view()), name='create_printer'),
     path('update_printer_status/<int:pk>', login_required(EditStatusPrinter.as_view()), name='update_printer_status'),
     path('compatibility/', login_required(PrinterCatrigeView.as_view()),name = 'compatibility'),
-    path('compatibility/<int:pk>/', login_required(PrinterCatrigeDetileView.as_view()), name='compatibility_detile')
-
+    path('compatibility/<int:pk>/', login_required(PrinterCatrigeDetileView.as_view()), name='compatibility_detile'),
+    path('printerinfo/<int:pk>/', login_required(PrintInfo.as_view()), name='printInfo')
 
 
 

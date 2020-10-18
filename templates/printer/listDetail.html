@@ -22,13 +22,9 @@
                    <p><strong>Зона:</strong> {{ printer.room.titul.titulName }}  </p>
                    <p><strong>Кабинет: </strong> {{ printer.room.numberRoom }} </p>
 
-
-
                     {% for pc in printerCatrige %}
                         {{ pc.catrige.name }}
                     {% endfor %}
-
-
 
                 </div>
                 </div>
@@ -39,6 +35,7 @@
                         <img  src="{% static 'img/print.png' %}" class="card-img" alt="...">
                      {% endif %}
                 </div>
+
 
 
   </div>

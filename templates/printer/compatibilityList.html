@@ -9,33 +9,16 @@
     {% block content %}
 
          {% for cp in printerCatrige %}
-             <div class="container">
-                 <div class="row">
-
-                 <h4>Совместимость картриджей</h4>
-
-                 <div class="container">
-
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <h6>Модель</h6>
-                                <div class="col-sm"><a href="{% url 'compatibility_detile' pk=cp.pk %}">{{ cp.name }}</a></div>
-                            </div>
-                        </div>
+                     <h3 class="List-title">Совместимость модели картриджей и принтеров</h3>
+           <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <a class="Link_login" href="{% url 'printInfo' pk=cp.pk %}"> Модель: {{ cp.name }}</a>
                     </div>
-                     <div class="row">
-                     <div class="col-sm">
-{#                          {% for c in cp.catrige.all %}  {{ c }}<br>#}
-{#                          {% endfor %}#}
-                     </div>
-                     </div>
-                 </div>
+
                 </div>
-             </div>
-         {% endfor %}
-
-
+           </div>
+        {% endfor %}
     {% endblock %}
 
     {% block footer %}

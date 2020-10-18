@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+   {% block  header%}
+        {% include 'header.html' %}
+    {% endblock %}
+
+
+    {% block content %}
+         <div class="container">
+            <div class="row">
+               <div class="col-sm">
+
+                   <p>Фирма: {{ printerInformation.firm.name }}</p>
+                <p>Модель: {{ printerInformation.name }} </p>
+                   <a href="{% url 'compatibility_detile' pk=printerInformation.pk %}">Совместимость</a>
+               </div>
+                <div class="col-sm">
+                {%  if printerInformation.photo %}
+                        <img  class="img-printer_detile" src="{{ printerInformation.photo.url }}"  alt="...">
+                     {% else %}
+                        <img  src="{% static 'img/print.png' %}" class="card-img" alt="...">
+                     {% endif %}
+                </div>
+
+
+
+
+
+            <div class="col-sm"></div>
+            <div class="col-sm"></div>
+
+
+
+
+
+
+
+            </div>
+         </div>
+
+
+
+    {% endblock %}
+
+    {% block footer %}
+         {% include 'footer.html' %}
+    {% endblock %}
