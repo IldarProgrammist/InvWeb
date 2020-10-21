@@ -23,12 +23,12 @@ body {
 }
 
 
- .footer {
- background: #f7f7f7;
- position: absolute;
- bottom: 0;
-}
 
+.nav-footer{
+   background: #f7f7f7;
+    position: absolute;
+     bottom: 0;
+}
 
 .img-wrapper{
       padding-top:90px;
@@ -71,10 +71,11 @@ a>navbar-brand{
 }
 
 .List-title{
-    margin: 20px;
+
     padding-left: 30px;
     font-size: 28px;
-    color: #007bff;;
+    color: #007bff;
+    padding-top:60px;
 }
 
 
@@ -240,7 +241,7 @@ input[type=submit] {
 #link_in_img_litle{
  color: #1b1e21;
     font-size: 21px;
-    padding-left: 20px;
+    padding-left: 28px;
 }
 #link_in_img_litle:hover{
     color: red;
@@ -251,4 +252,8 @@ input[type=submit] {
 #img_title{
     text-align: center;
     padding-left: 70px;
+}
+
+.wrap-index{
+    padding-top:60px
 }

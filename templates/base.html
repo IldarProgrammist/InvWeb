@@ -1,5 +1,5 @@
-{% load static %}
-<!DOCTYPE html>
+{% load static  %}
+
 <html lang="en">
 
 <head>
@@ -22,12 +22,14 @@
             {% block paginator %}
             {% endblock %}
 
-
-
-            {% block footer %}
-            {% endblock %}
-
             <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.js'%}"></script>
 
 </body>
+
+    <footer>
+            {% block footer %}
+            {% endblock %}
+
+    </footer>
+
 </html>

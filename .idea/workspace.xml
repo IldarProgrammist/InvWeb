@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="Функционал для просмотра совместимость Принтера с картриджем">
-      <change afterPath="$PROJECT_DIR$/templates/printer/information.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/InvWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/InvWeb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/printers/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/printers/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/printer/compatibilityDetil.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/compatibilityDetil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/printer/compatibilityList.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/compatibilityList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/printer/listDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/listDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InvWeb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/InvWeb/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/static_dev/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/static_dev/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main/print.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/print.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,6 +304,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
