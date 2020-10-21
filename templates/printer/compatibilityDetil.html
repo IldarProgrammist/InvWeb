@@ -6,15 +6,19 @@
     {% endblock %}
 
     {% block content %}
+
+        <div class="wrap-index">
          {% for cp in printerCatrige.catrige.all %}
                  <div class="container">
                      <div class="row">
-                         <div class="col-sm"> Картридж: {{ cp }}</div>
+                         <div class="col-md-8"> <h6>Картридж:</h6>  {{ cp }}</div>
                      </div>
                  </div>
-
+         </div>
 
          {% endfor %}
+
+
     {% endblock %}
 
     {% block footer %}

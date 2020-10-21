@@ -20,10 +20,11 @@ class PrinterForm(forms.ModelForm):
 class PrinterUpdateStatusForm(forms.ModelForm):
         class Meta:
             model = Printer
-            fields = ('serialNumber', 'status','discription')
+            fields = ('serialNumber', 'status','discription','date_now')
 
             widgets = {
                     'serialNumber': forms.TextInput(attrs={'class': 'form-control'}),
                     'status': forms.Select(attrs={'class': 'form-control'}),
                     'discription': forms.TextInput(attrs={'class': 'form-control'}),
+                    'date_now':forms.SelectDateWidget(attrs={'class': 'form-control'})
                 }

@@ -22,18 +22,9 @@ body {
     flex-grow: 1;
 }
 
-
-
-.nav-footer{
-   background: #f7f7f7;
-    position: absolute;
-     bottom: 0;
-}
-
 .img-wrapper{
       padding-top:90px;
       padding-left: 20px;
-
 }
 
 
@@ -41,12 +32,6 @@ body {
     color: black;
     font-size: 14px;
 }
-
-
-
-
-
-
 .link_wrap:hover{
    color: #007bff;;
    text-decoration: none;
@@ -255,5 +240,25 @@ input[type=submit] {
 }
 
 .wrap-index{
-    padding-top:60px
+    padding-top: 80px;
+
+
+}
+.nav-footer{
+   background: #f7f7f7;
+    position: absolute;
+     bottom: 0;
+}
+
+
+ .footer-wraper{
+    overflow: hidden;
+    display: flex;
+}
+.wrap_ditile_printer{
+    margin-top: 60px;
+}
+
+.index_form{
+    padding-top: 25px;
 }

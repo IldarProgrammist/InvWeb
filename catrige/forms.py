@@ -16,9 +16,10 @@ class CatrigeForm(forms.ModelForm):
 class CatrigeUpdateStatusForm(forms.ModelForm):
     class Meta:
         model = Catriege
-        fields = ('serialNumber', 'status')
+        fields = ('serialNumber', 'status', 'date')
 
         widgets = {
             'serialNumber': forms.TextInput(attrs={'class': 'form-control'}),
             'status': forms.Select(attrs={'class': 'form-control'}),
+            'date': forms.SelectDateWidget(attrs={'class': 'form-control'} )
         }

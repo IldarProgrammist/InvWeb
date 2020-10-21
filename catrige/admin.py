@@ -23,6 +23,7 @@ class CatrigeModelAdmin(admin.ModelAdmin):
 class CatrigeAdmin(admin.ModelAdmin):
     list_display = ['serialNumber', 'status','date']
     search_fields = ['serialNumber']
+
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == 'category':
             return CatrigeChoiceField(Category.objects.filter(slug = 'catrige'))

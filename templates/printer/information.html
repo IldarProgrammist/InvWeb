@@ -7,15 +7,16 @@
 
 
     {% block content %}
+        <div class="wrap-index"></div>
          <div class="container">
             <div class="row">
-               <div class="col-sm">
-
+               <div class="col">
                    <p>Фирма: {{ printerInformation.firm.name }}</p>
-                <p>Модель: {{ printerInformation.name }} </p>
+                    <p>Модель: {{ printerInformation.name }} </p>
                    <a href="{% url 'compatibility_detile' pk=printerInformation.pk %}">Совместимость</a>
                </div>
-                <div class="col-sm">
+
+                <div class="col">
                 {%  if printerInformation.photo %}
                         <img  class="img-printer_detile" src="{{ printerInformation.photo.url }}"  alt="...">
                      {% else %}
@@ -23,18 +24,8 @@
                      {% endif %}
                 </div>
 
-
-
-
-
             <div class="col-sm"></div>
             <div class="col-sm"></div>
-
-
-
-
-
-
 
             </div>
          </div>

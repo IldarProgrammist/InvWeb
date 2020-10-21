@@ -7,41 +7,75 @@
 
     {% block content %}
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                  <div class="margin_detile">
-                   <h3>Информация:</h3>
-                   <p><strong>Категория:</strong>  {{ printer.category.name }}</p>
-                   <p><strong>Серийный номер:</strong>  {{ printer.serialNumber }}</p>
-                   <p><strong>Ip-адрес:</strong> {{ printer.ip }}</p>
-                   <p><strong>Модель:</strong> {{ printer.printerModel.name }}</p>
-                   <p><strong>Фирма:</strong> {{ printer.printerModel.firm.name }}</p>
-                   <p><strong>Статус:</strong>  {{ printer.status.name }}<a class="Link_login" href="{% url 'update_printer_status' printer.pk %}"><small>(ред.)</small></a></p>
-                   <h3>Место расположения:</h3>
-                   <p><strong>Зона:</strong> {{ printer.room.titul.titulName }}  </p>
-                   <p><strong>Кабинет: </strong> {{ printer.room.numberRoom }} </p>
+        <div class="wrap_ditile_printer">
 
-                    {% for pc in printerCatrige %}
-                        {{ pc.catrige.name }}
-                    {% endfor %}
+                <div class="container">
+                <a class="Link_header" href="{% url 'printerList' %}">Назад</a>
+                    <div class="row">
+                         <div class="col">
+                              <div class="col"><h3>Информация:</h3></div>
+                             <div class="col"> <p><strong>Категория:</strong>  {{ printer.category.name }}</p></div>
+                            <div class="col"><p><strong>Серийный номер:</strong>  {{ printer.serialNumber }}</p></div>
+                            <div class="col"><p><strong>Ip-адрес:</strong> {{ printer.ip }}</p></div>
+                            <div class="col"><p><strong>Модель:</strong> {{ printer.printerModel.name }}</div>
+                           <div class="col"><p><strong>Фирма:</strong> {{ printer.printerModel.firm.name }}</p></div>
+                           <div class="col"> <p><strong>Статус:</strong>  {{ printer.status.name }}<a class="Link_login" href="{% url 'update_printer_status' printer.pk %}"><small>(ред.)</small></a></p></div>
+                          <div class="col"><h3>Место расположения:</h3></div>
+                             <div class="col"> <p><strong>Зона:</strong> {{ printer.room.titul.titulName }}  </p></div>
+                         <div class="col"><p><strong>Кабинет: </strong> {{ printer.room.numberRoom }} </p></div>
+                         </div>
+                        <div class="col">
+                              {%  if printer.printerModel.photo %}
+                                 <img  class="img-printer_detile" src="{{ printer.printerModel.photo.url }}"  alt="...">
+                             {% else %}
+                                <img  src="{% static 'img/print.png' %}" class="card-img" alt="...">
+                              {% endif %}
 
+
+
+                        </div>
+
+                    </div>
                 </div>
-                </div>
-                <div class="col-sm">
-                     {%  if printer.printerModel.photo %}
-                        <img  class="img-printer_detile" src="{{ printer.printerModel.photo.url }}"  alt="...">
-                     {% else %}
-                        <img  src="{% static 'img/print.png' %}" class="card-img" alt="...">
-                     {% endif %}
-                </div>
+        </div>
 
 
-
-  </div>
-</div>
-
-
+{#        <div class="wrap_ditile_printer">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-sm">#}
+{#                  <div class="margin_detile">#}
+{#                   <h3>Информация:</h3>#}
+{#                   <p><strong>Категория:</strong>  {{ printer.category.name }}</p>#}
+{#                   <p><strong>Серийный номер:</strong>  {{ printer.serialNumber }}</p>#}
+{#                   <p><strong>Ip-адрес:</strong> {{ printer.ip }}</p>#}
+{#                   <p><strong>Модель:</strong> {{ printer.printerModel.name }}</p>#}
+{#                   <p><strong>Фирма:</strong> {{ printer.printerModel.firm.name }}</p>#}
+{#                   <p><strong>Статус:</strong>  {{ printer.status.name }}<a class="Link_login" href="{% url 'update_printer_status' printer.pk %}"><small>(ред.)</small></a></p>#}
+{#                   <h3>Место расположения:</h3>#}
+{#                   <p><strong>Зона:</strong> {{ printer.room.titul.titulName }}  </p>#}
+{#                   <p><strong>Кабинет: </strong> {{ printer.room.numberRoom }} </p>#}
+{##}
+{#                    {% for pc in printerCatrige %}#}
+{#                        {{ pc.catrige.name }}#}
+{#                    {% endfor %}#}
+{##}
+{#                </div>#}
+{#                </div>#}
+{#                <div class="col-sm">#}
+{#                     {%  if printer.printerModel.photo %}#}
+{#                        <img  class="img-printer_detile" src="{{ printer.printerModel.photo.url }}"  alt="...">#}
+{#                     {% else %}#}
+{#                        <img  src="{% static 'img/print.png' %}" class="card-img" alt="...">#}
+{#                     {% endif %}#}
+{#                </div>#}
+{##}
+{##}
+{#            </div>#}
+{#            </div>#}
+{#</div>#}
+{##}
+{##}
 
 
     {% endblock %}

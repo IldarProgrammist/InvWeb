@@ -7,8 +7,6 @@
 
 
     {% block content %}
-
-
     <div class="wrap-index">
         <div class="container">
             <div class="row">
@@ -25,7 +23,7 @@
 
             <div class="col">
                      <a href="{% url 'print' %}"><img class="img-wrapper" src="{% static 'img/print-printer-tool-with-printed-paper-outlined-symbol_icon-icons.com_57772.png' %}"></a>
-                    <div class="link_img"> <a id="link_in_img"  class="link_in_img" href="{% url 'print' %}">Печать</a></div>
+               <div class="col"><div class="link_img"> <a id="link_in_img"  class="link_in_img" href="{% url 'print' %}">Печать</a></div> </div>
 
             </div>
 
@@ -38,10 +36,6 @@
             </div>
         </div>
     </div>
-
-
-
-
 
     {% endblock %}
 

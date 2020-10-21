@@ -1,30 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
 
-   {% block  header%}
-        {% include 'header.html' %}
-    {% endblock %}
+
 
     {% block content %}
-         <h1>Редактировать картридж</h1>
+
+    <div class="index_form">
         <div class="container">
+             <a class="Link_header" href=" {% url 'printer_detail' pk=printer.pk %}">Назад</a>
             <div class="row">
-
                 <form method="post">
-                    <div class="form-group">
-
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                    </div>
+                      {% csrf_token %}
+                      {{ form.as_p }}
 
                     <button type="submit" class="btn btn-outline-secondary">Сохранить</button>
-
                 </form>
 
             </div>
         </div>
-
-
+</div>
     {% endblock %}
 
     {% block footer %}

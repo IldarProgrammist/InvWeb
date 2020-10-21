@@ -47,7 +47,7 @@ class Printer(Products):
     ip = models.CharField(max_length=30, verbose_name='IP-адрес', blank=True)
     status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус принтера')
     discription = models.TextField(verbose_name='Описание',blank=True)
-    date_now = models.DateTimeField(auto_now_add=True,  verbose_name='Дата')
+    date_now = models.DateTimeField(verbose_name='Дата')
 
     class Meta:
         verbose_name = 'Принтер'

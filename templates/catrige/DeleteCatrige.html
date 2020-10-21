@@ -7,6 +7,7 @@
 
     {% block content %}
 
+
         <div class="container">
             <div class="row">
 
@@ -14,7 +15,6 @@
                 <form method="POST">
                     <div class="form-group">
                         {% csrf_token %}
-
                     </div>
                  <p class="message">Вы действительно хотите удалить картридж с серийным номером {{ catriege.serialNumber }}?
                          <button  type="submit" class="btn btn-outline-secondary">Удалить</button>

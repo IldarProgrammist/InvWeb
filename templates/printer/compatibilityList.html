@@ -8,6 +8,7 @@
 
     {% block content %}
 
+
          {% for cp in printerCatrige %}
                      <h3 class="List-title">Совместимость модели картриджей и принтеров</h3>
            <div class="container">
@@ -15,9 +16,11 @@
                     <div class="col-sm">
                         <a class="Link_login" href="{% url 'printInfo' pk=cp.pk %}"> Модель: {{ cp.name }}</a>
                     </div>
-
                 </div>
            </div>
+
+
+
         {% endfor %}
     {% endblock %}
 

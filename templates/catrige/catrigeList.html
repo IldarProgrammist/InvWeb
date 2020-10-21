@@ -32,6 +32,7 @@
                               <th>Модель картриджа</th>
                               <th>Цвет картриджа</th>
                               <th>Статус</th>
+                                <th>Дата изменения</th>
                             </tr>
                           </thead>
 
@@ -42,6 +43,8 @@
                                   <td>{{ c.model.name }}</td>
                                   <td>{{ c.model.color.name }}</td>
                                   <td>{{ c.status.name }}</td>
+                                    <td>{{ c.date }}</td>
+
                                 </tr>
                               </tbody>
                     {% endfor %}
