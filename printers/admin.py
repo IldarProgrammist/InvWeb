@@ -25,3 +25,7 @@ class PrinterAdmin(admin.ModelAdmin):
         if db_field.name == 'category':
             return PrinterChoiceField(Category.objects.filter(slug='printer'))
         return super().formfield_for_foreignkey(db_field, request, **kwargs)
+
+@admin.register(JurnalPrinter)
+class JurnalPrinterAdmin(admin.ModelAdmin):
+    list = ['numberRegistrarion', 'appeal']

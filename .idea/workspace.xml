@@ -1,30 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/InvWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/InvWeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="поравлен frontend">
+      <change afterPath="$PROJECT_DIR$/printers/migrations/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catrige/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catrige/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catrige/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/printers/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/printers/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printers/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/printers/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/printers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/printers/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/static_dev/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/static_dev/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/catrige/DeleteCatrige.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catrige/DeleteCatrige.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/catrige/UpdateCatrige.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catrige/UpdateCatrige.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/catrige/catrigeList.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catrige/catrigeList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/catrige/catrige_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catrige/catrige_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/catrige/listDetile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catrige/listDetile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/printer/compatibilityDetil.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/compatibilityDetil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/printer/compatibilityList.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/compatibilityList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/printer/information.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/information.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/printer/listDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/listDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/printer/printerList.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/printerList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/printer/printer_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/printer_info.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +44,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/printers" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -80,11 +61,11 @@
       <recent name="D:\Projects\python\django\InvWeb\static\static_dev\bootstrap" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SiburAdmin\PycharmProjects\InvWeb\printers" />
       <recent name="D:\Projects\python\django\InvWeb\static\static_dev\img" />
       <recent name="D:\Projects\python\django\InvWeb\static\static_dev\js" />
       <recent name="D:\Projects\python\django\InvWeb\static\static_dev\css" />
       <recent name="D:\Projects\python\django\InvWeb\printer" />
-      <recent name="D:\Projects\python\django\InvWeb\main" />
     </key>
   </component>
   <component name="RunManager">
@@ -215,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600109557666</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="поравлен frontend">
+      <created>1603314854756</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1603314854757</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -244,13 +232,22 @@
     <MESSAGE value="Создание главной страницы" />
     <MESSAGE value="создание файла requirements.txt" />
     <MESSAGE value="добавление  файла Catrige.html&#10;добавление  палели поиска в файле Catrige.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавление  файла Catrige.html&#10;добавление  палели поиска в файле Catrige.html" />
+    <MESSAGE value="поравлен frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="поравлен frontend" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1603314911754">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1603314911754" />
     <state x="129" y="55" key="MergeDialog" timestamp="1603301212058">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1603301212058" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1603315035005">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603315035005" />
     <state x="463" y="77" key="git4idea.branch.GitSmartOperationDialog" timestamp="1603301204033">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
