@@ -72,14 +72,10 @@ def jurnalPrinterListView(request):
 
     searchQwery = request.GET.get('search', '')
     if searchQwery:
-        jurnalPrinter = JurnalPrinter.objects.filter(Q(status__name =searchQwery))
+        jurnalPrinter = JurnalPrinter.objects.filter(Q(status__name =searchQwery) | Q(serialNumber__serialNumber__icontains =searchQwery) )
     else:
         jurnalPrinter = JurnalPrinter.objects.all()
     return render(request, 'printer/JurnalListPrinter.html', context={'jpl': jurnalPrinter})
-
-
-
-
 
 
 

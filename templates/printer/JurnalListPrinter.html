@@ -39,6 +39,9 @@
                       <tr>
                           <th>Номер обращения</th>
                           <th>Серийный номер</th>
+                          <th>Модель принтера</th>
+                          <th>Фирма принтера</th>
+
 
                           <th>Статус</th>
                           <th>Дата</th>
@@ -48,7 +51,9 @@
                         <tbody>
                             <tr>
                                  <td>{{ prtinter.appeal }}</td>
-                                 <td>{{ prtinter.serialNumber }}</td>
+                                 <td> {{ prtinter.serialNumber }} </td>
+                                <td>{{ prtinter.serialNumber.printerModel.name }}</td>
+                                <td>{{ prtinter.serialNumber.printerModel.firm }}</td>
                                  <td>{{ prtinter.status}}</td>
                                  <td>{{ prtinter.date }}</td>
                             </tr>
