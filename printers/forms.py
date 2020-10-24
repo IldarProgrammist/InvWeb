@@ -1,30 +1,41 @@
 from django import forms
-from .models import Printer
+from printers.models import JurnalPrinter, Printer
 
-class PrinterForm(forms.ModelForm):
+
+
+class PrinterJurnalForm(forms.ModelForm):
+
     class Meta:
-        model = Printer
-        fields = ('category','printerModel', 'serialNumber','ip', 'room', 'status')
+        model = JurnalPrinter
+        fields =('status','date','discription')
 
         widgets = {
-            'category': forms.Select(attrs={'class': 'form-control'}),
-            'printerModel': forms.Select(attrs={'class': 'form-control'}),
-            'serialNumber': forms.TextInput(attrs={'class': 'form-control'}),
-            'ip': forms.TextInput(attrs={'class': 'form-control'}),
-            'room': forms.Select(attrs={'class': 'form-control'}),
-            'status':forms.Select(attrs={'class': 'form-control'}),
+            'status': forms.Select(attrs={'class': 'form-control'}),
+            'date':   forms.SelectDateWidget(attrs={'class': 'form-control'}),
+            'discription':forms.TextInput(attrs={'class':'form-control'})
         }
 
 
 
-class PrinterUpdateStatusForm(forms.ModelForm):
-        class Meta:
-            model = Printer
-            fields = ('serialNumber', 'status','discription','date_now')
+class PrinterJurnalCreateForm(forms.ModelForm):
+    class Meta:
+        model = JurnalPrinter
+        fields ='__all__'
 
-            widgets = {
-                    'serialNumber': forms.TextInput(attrs={'class': 'form-control'}),
-                    'status': forms.Select(attrs={'class': 'form-control'}),
-                    'discription': forms.TextInput(attrs={'class': 'form-control'}),
-                    'date_now':forms.SelectDateWidget(attrs={'class': 'form-control'})
-                }
+        widgets = {
+            'appeal': forms.TextInput(attrs={'class': 'form-control'}),
+            'serialNumber': forms.Select(attrs={'class': 'form-control'}),
+            'status': forms.Select(attrs={'class': 'form-control'}),
+            'discription': forms.TextInput(attrs={'class': 'form-control'}),
+            'date': forms.SelectDateWidget(attrs={'class': 'form-control'}),
+
+        }
+
+class PrinterJurnalStatusForm(forms.ModelForm):
+    class Meta:
+        model = JurnalPrinter
+        fields = '__all__'
+
+        widgets = {
+            'status': forms.Select(attrs={'class':'form-control'})
+        }

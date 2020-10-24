@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+   {% block  header%}
+        {% include 'header.html' %}
+    {% endblock %}
+
+    {% block content %}
+
+        <div class="wrap_ditile_printer">
+
+                <div class="container">
+                <a class="Link_header" href="#">Назад</a>
+                    <div class="row">
+                         <div class="col">
+                            <div class="col"><h3>Информация:</h3></div>
+                            <div class="col"> <p><strong>Номер заявки:</strong>  {{ jpd.appeal }}</p></div>
+                            <div class="col"><p><strong>Серийный номер:</strong> {{ jpd.serialNumber }} </p></div>
+                            <div class="col"><p><strong>Статус:</strong> <a class="Link_login" href="{% url 'update_jurnal_status_printer' pk=jpd.pk %}">{{ jpd.status.name }}<small>(ред.)</small></a> </p></div>
+                            <div class="col"><p><strong>Описание:</strong> {{ jpd.discription }}</div>
+                         </div>
+                    </div>
+                </div>
+        </div>
+
+
+    {% endblock %}
+
+    {% block footer %}
+         {% include 'footer.html' %}
+    {% endblock %}

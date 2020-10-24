@@ -9,7 +9,7 @@ urlpatterns = [
     path('update/<int:pk>/', login_required(UppdateCatrige.as_view()) ,name = 'update_catrige'),
     path('update_catrige_status/<int:pk>', login_required(EditStatusCatrige.as_view()), name = 'update_catrige_status'),
     path('delete/<int:pk>/', login_required(DeleteCatrige.as_view()), name = 'delete_catrige'),
-    path('refueling/', refuelingCatrigeListView, name='refueling'),
+    path('refueling/',refuelingCatrigeListView, name='refueling'),
     path('list/', catrigeSearchView, name='catrigeList'),
     path('list/', CatrigeListView.as_view(), name='catrigeList'),
 ]

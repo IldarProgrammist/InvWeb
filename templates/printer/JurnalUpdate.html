@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block  header%}
+        {% include 'header.html' %}
+    {% endblock %}
+
+    {% block content %}
+        <div class="wrap-index">
+            <div class="container">
+                <div class="row">
+
+                        <form method="post">
+                          <p > Номер заявки: {{ jplu.appeal }}</p>
+                          <p> Серийный номер: <a class="Link_header" href="#">{{ jplu.serialNumber }}</a> </p>
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-outline-secondary">Сохранить</button>
+                        </form>
+
+                </div>
+            </div>
+        </div>
+
+    {% endblock %}
+
+    {% block footer %}
+         {% include 'footer.html' %}
+    {% endblock %}

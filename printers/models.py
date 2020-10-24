@@ -1,4 +1,3 @@
-from django.db import models
 from catrige.models import *
 from localization.models import Room
 
@@ -45,9 +44,7 @@ class Printer(Products):
     printerModel = models.ForeignKey(PrinterModel, on_delete=models.CASCADE, verbose_name='Модель принтера')
     room = models.ForeignKey(Room, on_delete=models.CASCADE, verbose_name='Локация')
     ip = models.CharField(max_length=30, verbose_name='IP-адрес', blank=True)
-    status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус принтера')
-    discription = models.TextField(verbose_name='Описание',blank=True)
-    date_now = models.DateTimeField(verbose_name='Дата')
+
 
     class Meta:
         verbose_name = 'Принтер'
@@ -62,15 +59,18 @@ class Printer(Products):
 
 
 class JurnalPrinter(models.Model):
-    numberRegistrarion = models.IntegerField(auto_created=True, default=0000)
     appeal = models.CharField(max_length=100, verbose_name='Номер обращение')
-    serialNumber = models.ForeignKey(Printer, on_delete= models.CASCADE, verbose_name='Серийный номер')
-    status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус')
-    date = models.DateTimeField(verbose_name='Дата регистрации')
+    serialNumber = models.ForeignKey(Printer, on_delete= models.CASCADE, verbose_name='Серийный номер',related_name='sn')
+    status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус',related_name='st')
+    date = models.DateField(verbose_name='Дата регистрации')
     discription = models.TextField(verbose_name='Описание', blank=True)
 
     def __str__(self):
         return self.appeal
+
+
+    def get_absolute_url(self):
+        return reverse('jurnal_printer')
 
     class Meta:
         verbose_name = 'Журнал регистрации принтера'

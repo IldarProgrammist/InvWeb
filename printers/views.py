@@ -1,10 +1,10 @@
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.http import request
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import *
-
-from printers.forms import PrinterForm, PrinterUpdateStatusForm
-from printers.models import Printer, PrinterModel
+from printers.forms import PrinterJurnalCreateForm, PrinterJurnalStatusForm
+from printers.models import PrinterModel, JurnalPrinter, Printer
 
 
 class PrinterInfoView(TemplateView):
@@ -16,9 +16,9 @@ def printerListView(request):
     searchQwery = request.GET.get('search', '')
     if searchQwery:
         printer = Printer.objects.filter(Q(serialNumber__contains=searchQwery))
+
     else:
         printer = Printer.objects.all()
-
     return render(request, 'printer/printerList.html', context={'printer_': printer})
 
 
@@ -41,25 +41,12 @@ class PrinterCatrigeDetileView(DetailView):
     context_object_name = 'printerCatrige'
 
 
-
-
 class PrintInfo(DetailView):
     model = PrinterModel
     template_name = 'printer/information.html'
     context_object_name = 'printerInformation'
 
 
-
-class CreatePrinterView(CreateView):
-    model = Printer
-    form_class =  PrinterForm
-    template_name = 'printer/CreatePrinter.html'
-
-
-class EditStatusPrinter(UpdateView):
-    model = Printer
-    form_class = PrinterUpdateStatusForm
-    template_name = 'catrige/UpdateCatrige.html'
 
 
 @login_required
@@ -78,5 +65,56 @@ def printerListView(request):
         printer = Printer.objects.all()
 
     return render(request, 'printer/printerList.html', context={'printer_': printer})
+
+
+@login_required
+def jurnalPrinterListView(request):
+
+    searchQwery = request.GET.get('search', '')
+    if searchQwery:
+        jurnalPrinter = JurnalPrinter.objects.filter(Q(status__name =searchQwery))
+    else:
+        jurnalPrinter = JurnalPrinter.objects.all()
+    return render(request, 'printer/JurnalListPrinter.html', context={'jpl': jurnalPrinter})
+
+
+
+
+
+
+
+
+class JurnalPrinterDetileView(DetailView):
+    model = JurnalPrinter
+    template_name = 'printer/JurnalDetile.html'
+    context_object_name = 'jpd'
+
+
+class JurnalPrinterCreate(CreateView):
+    model = JurnalPrinter
+    form_class =  PrinterJurnalCreateForm
+    template_name = 'printer/JurnalPrinterCreate.html'
+    context_object_name = 'jplc'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# class JurnalPrinterUpdateView(UpdateView):
+#     model = JurnalPrinter
+#     form_class = PrinterJurnalForm
+#     template_name = 'printer/JurnalUpdate.html'
+#     context_object_name = 'jplu'
+
+
 
 
