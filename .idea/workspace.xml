@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="Оформление формы добавления записи в журнал">
-      <change afterPath="$PROJECT_DIR$/templates/catrige/JurnalCarigeList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/catrige/JurnalCreateCatrige.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catrige/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catrige/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catrige/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catrige/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catrige/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/catrige/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/catrige/catrige_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catrige/catrige_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/printer/JurnalListPrinter.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/JurnalListPrinter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/printer/printerList.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/printerList.html" afterDir="false" />
-    </list>
+    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="Добавлен журнал картриджей" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +20,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -116,7 +110,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599935910852</updated>
-      <workItem from="1603522484208" duration="39834000" />
+      <workItem from="1603522484208" duration="40166000" />
     </task>
     <task id="LOCAL-00001" summary="Добавление модели PrinterCatrigeCompatidility">
       <created>1599981199294</created>
@@ -230,7 +224,28 @@
       <option name="project" value="LOCAL" />
       <updated>1603579580100</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Добавлен журнал картриджей">
+      <created>1603645714252</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1603645714252</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Добавлен журнал картриджей">
+      <created>1603645796115</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1603645796115</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Добавлен журнал картриджей">
+      <created>1603645834107</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1603645834107</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -262,17 +277,22 @@
     <MESSAGE value="поравлен frontend" />
     <MESSAGE value="Поиск в журнали принторов реализовано" />
     <MESSAGE value="Оформление формы добавления записи в журнал" />
-    <option name="LAST_COMMIT_MESSAGE" value="Оформление формы добавления записи в журнал" />
+    <MESSAGE value="Добавлен журнал картриджей" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен журнал картриджей" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="421" y="188" key="#Notifications" timestamp="1603645896542">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="421" y="188" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1603645896542" />
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603579101292">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1603579101292" />
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1603579578139">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1603645833230">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1603579578139" />
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1603645833230" />
     <state x="129" y="55" key="MergeDialog" timestamp="1603301212058">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -281,10 +301,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1603470912837" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1603579583063">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1603645883476">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603579583063" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603645883476" />
     <state x="463" y="77" key="git4idea.branch.GitSmartOperationDialog" timestamp="1603301204033">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
