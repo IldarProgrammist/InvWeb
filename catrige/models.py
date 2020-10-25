@@ -59,7 +59,7 @@ class Catriege(Products):
 
 
 
-
+#
 class CatrigeJurnal(models.Model):
     appeal = models.CharField(max_length=100, verbose_name='Заявка', unique=True)
     serialNumber = models.ForeignKey(Catriege, on_delete=models.CASCADE, verbose_name='Серийный номер')
