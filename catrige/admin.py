@@ -17,6 +17,10 @@ class CatrigeModelChoiceFiedl(forms.ModelChoiceField):
 class CatrigeModelAdmin(admin.ModelAdmin):
     list_display = ['name', 'color']
 
+@admin.register(CatrigeJurnal)
+class CatrigeJurnalAdmin(admin.ModelAdmin):
+    list_display = ['appeal', 'serialNumber', 'status', 'date']
+
 
 
 @admin.register(Catriege)

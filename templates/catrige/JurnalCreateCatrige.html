@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+    {% block content %}
+
+            <div class="container">
+                <div class="row">
+{#                     <a id="keybord" href="#"><img  src="{% static 'img/angle_left-48_46775.png' %}"></a>#}
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-outline-secondary">Сохранить</button>
+                        </form>
+                </div>
+            </div>
+
+
+    {% endblock %}
+

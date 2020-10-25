@@ -12,4 +12,7 @@ urlpatterns = [
     path('refueling/',refuelingCatrigeListView, name='refueling'),
     path('list/', catrigeSearchView, name='catrigeList'),
     path('list/', CatrigeListView.as_view(), name='catrigeList'),
+    path('jurnal/', login_required(JurnalCarigeListView.as_view()), name='jurnal_catrige_list'),
+    path('jurnal/create/', login_required(JurnlalCatrigeCreate.as_view()) , name = 'jurnal_catrige_create')
+
 ]

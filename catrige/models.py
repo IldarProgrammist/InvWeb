@@ -60,3 +60,20 @@ class Catriege(Products):
 
 
 
+class CatrigeJurnal(models.Model):
+    appeal = models.CharField(max_length=100, verbose_name='Заявка', unique=True)
+    serialNumber = models.ForeignKey(Catriege, on_delete=models.CASCADE, verbose_name='Серийный номер')
+    status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус')
+    date = models.DateField(verbose_name='Дата регистрации')
+    discription = models.TextField(verbose_name='Описание', blank=True)
+
+    def __str__(self):
+        return self.appeal
+
+    def get_absolute_url(self):
+        return reverse('jurnal_catrige_list')
+
+    class Meta:
+        verbose_name = 'Журнал картриджа'
+        verbose_name_plural = 'Журналы картриджей'
+

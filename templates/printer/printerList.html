@@ -41,10 +41,7 @@
                               <th>Модель принтера</th>
                               <th>Фирма</th>
                               <th>IP</th>
-
                               <th>Место расположения</th>
-                              <th>Статус</th>
-
                            </tr>
 
                     {% for prtinter in printer_ %}
@@ -57,7 +54,6 @@
                                     <td>{{ prtinter.ip }}</td>
 
                                      <td>{{ prtinter.room.titul.titulName }}</td>
-                                    <td>{{ prtinter.status }}</td>
                                 </tr>
                               </tbody>
 

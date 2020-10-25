@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 
 from catrige.models import *
 from django.views.generic import CreateView, UpdateView, DeleteView, TemplateView, DetailView, ListView
-from .forms import CatrigeForm, CatrigeUpdateStatusForm
+from .forms import CatrigeForm, CatrigeUpdateStatusForm, CatrigeJurnalCreateForm
 
 
 @login_required
@@ -80,3 +80,17 @@ class DeleteCatrige(DeleteView):
     model = Catriege
     template_name = 'catrige/DeleteCatrige.html'
     success_url =  reverse_lazy('catrigeList')
+
+
+
+class JurnalCarigeListView(ListView):
+    model = CatrigeJurnal
+    template_name = 'catrige/JurnalCarigeList.html'
+    context_object_name = 'jcl'
+
+
+class JurnlalCatrigeCreate(CreateView):
+    model = CatrigeJurnal
+    form_class = CatrigeJurnalCreateForm
+    template_name = 'catrige/JurnalCreateCatrige.html'
+    context_object_name = 'jcc'
