@@ -23,15 +23,6 @@
          <div class="col"></div>
          <div class="col"></div>
          <div class="col"></div>
-         <div class="col">
-             {% if user.is_authenticated %}
-                    <p class="user-info_link">{{ user.username }}</p>
-                 {% else %}
-
-                 {% endif %}
-
-         </div>
-
          <div class="col"></div>
          <div class="col"></div>
          <div class="col"></div>
@@ -39,10 +30,10 @@
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
-           <div class="col"></div>
-         <div class="col"></div>
-         <div class="col"></div>
         <div class="col"></div>
+       <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
@@ -51,7 +42,15 @@
          <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
-        <div class="col"></div>
+        <div class="col">
+         <div class="col">
+             {% if user.is_authenticated %}
+                    <p class="user-info_link">{{ user.username }}</p>
+                 {% else %}
+
+             {% endif %}
+         </div>
+</div>
         <div class="col"></div>
         <div class="col">
 
@@ -63,7 +62,7 @@
                 <a class="logo_link" href="{% url 'login' %}">Войти</a>
                 {% endif %}
 
-        </div>
+            </div>
         </div>
         </div>
 </div>

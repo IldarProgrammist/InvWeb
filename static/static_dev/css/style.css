@@ -138,7 +138,7 @@ input[type=submit] {
 
 
  .user-info_link{
-    color: #005cbf;
+    color: #c82333;
 }
  .zag_log{
      margin-top: 15px;
@@ -194,7 +194,6 @@ input[type=submit] {
     color: #1b1e21;
     margin-left: 30px;
     font-size: 16px;
-
 
 
 }
@@ -268,5 +267,8 @@ input[type=submit] {
 }
 #keybord{
     padding-top: 200px;
+}
+.container_header{
+
 }
 

@@ -3,91 +3,149 @@
 {% load static %}
 {% block header %}
 
-<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
-<!--    <a id="logo" class="navbar-brand" href="{% url 'home' %}">Портэнерго</a>-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a id="logo" class="navbar-brand" href="{% url 'home' %}">Портэнерго</a>
 
-<!--      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--        <span class="navbar-toggler-icon"></span>-->
-<!--      </button>-->
-<!--      <div class="collapse navbar-collapse" id="navbarNavAltMarkup"></div>-->
-<!--        <div class="container">-->
-
-<!--            <div class="row">-->
-
-<!--                <div class="col-sm"> <a class="Link_header" href="#">Рабочее место</a></div>-->
-<!--                <div class="col-sm"><a class="Link_header" href="#">Пользователи</a></div>-->
-<!--                <div class="col-sm"><a class="Link_header" href="{% url 'print' %}">Печать</a></div>-->
-<!--                <div class="col-sm"><a class="Link_header" href="#">База знаний</a></div>-->
+    <div class="container_header">
 
 
-<!--                  <div class="col-sm"><a class="Link_header" href="#">База знаний</a>-->
-<!--                   {% if user.is_authenticated %}-->
-<!--                    <p class="user-info_link">{{ user.username }}</p>-->
-<!--                    {% else %}-->
-<!--                    {% endif %}-->
-<!--                  </div>-->
-<!--            </div>-->
-<!--        </div>-->
+    <div class="container">
+            <div class="row">
 
 
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--         </div>-->
-<!--         <div class="col"></div>-->
-<!--         <div class="col"></div>-->
-<!--         <div class="col"></div>-->
-<!--        <div class="col">-->
+        <div class="col-sm-2"><a class="Link_header" href="#">Рабочее место</a></div>
+        <div class="col-sm-2"><a class="Link_header" href="#">Пользователи</a></div>
+        <div class="col-sm-2"><a class="Link_header" href="{% url 'print' %}">Печать</a></div>
+        <div class="col-sm-2"><a class="Link_header" href="#">База знаний</a></div>
+        <div class="col"></div>
+        <div class="col"></div>
+         <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+         <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
 
-<!--               <div class="col-md-3">-->
-<!--                {% if user.username %}-->
-<!--                <a class="logo_link" href="{% url 'logout' %}">Выйти</a>-->
-<!--                {% else %}-->
-<!--                <a class="logo_link" href="{% url 'login' %}">Войти</a>-->
-<!--                {% endif %}-->
-<!--        </div>-->
-<!--        </div>-->
-<!--        </div>-->
-<!--</div>-->
-<!--</nav>-->
 
+            <div class="col">
+               {% if user.is_authenticated %}
+                    <p class="user-info_link"> {{ user.username }}</p>
+                 {% else %}
+             {% endif %}
+             </div>
 
+            <div class="col">
 
+                 {% if user.username %}
+                <a class="logo_link" href="{% url 'logout' %}">Выйти</a>
+                {% else %}
+                <a class="logo_link" href="{% url 'login' %}">Войти</a>
+             {% endif %}
 
+            </div>
 
+            </div>
 
-<div class="container">
-    <div class="row">
- <nav class="navbar navbar-expand-lg fixed-top">
- <a class="navbar-brand" href="{% url 'home' %}">Портэнерго</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
- <span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse " id="navbarSupportedContent">     <ul class="navbar-nav mr-4">
- <li class="nav-item"></li>
-
-    <li class="nav-item"><a class="Link_header" href="#">Рабочее место</a></li>
-    <li class="nav-item"><div class="col-sm"><a class="Link_header" href="#">Пользователи</a></div> </li>
-    <li class="nav-item"><div class="col-sm"><a class="Link_header" href="{% url 'print' %}">Печать</a></div> </li>
-    <li class="nav-item"><a class="Link_header" href="#">База знаний</a></a>       </li>
-</ul>
-</div>
- </nav>
         </div>
+
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</nav>
 
 {% endblock header %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{##}
+{#{% extends 'base.html' %}#}
+{#{% load static %}#}
+{#{% block header %}#}
+{##}
+{##}
+{#<div class="container">#}
+{#    <div class="row">#}
+{# <nav class="navbar navbar-expand-lg fixed-top">#}
+{# <a class="navbar-brand" href="{% url 'home' %}">Портэнерго</a>#}
+{#<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">#}
+{# <span class="navbar-toggler-icon"></span>#}
+{#</button>#}
+{#<div class="collapse navbar-collapse " id="navbarSupportedContent">#}
+{#    <ul class="navbar-nav mr-4">#}
+{# <li class="nav-item"></li>#}
+{##}
+{#    <li class="nav-item"><a class="Link_header" href="#">Рабочее место</a></li>#}
+{#    <li class="nav-item"><div class="col-sm"><a class="Link_header" href="#">Пользователи</a></div> </li>#}
+{#    <li class="nav-item"><div class="col-sm"><a class="Link_header" href="{% url 'print' %}">Печать</a></div> </li>#}
+{#    <li class="nav-item"><a class="Link_header" href="#">База знаний</a></a>       </li>#}
+{#    </ul>#}
+{#</div>#}
+{# </nav>#}
+{#        <div class="col"></div>#}
+{#        <div class="col"></div>#}
+{##}
+{#        <div class="col">#}
+{#            {% if user.is_authenticated %}#}
+{#          <p class="user-info_link">{{ user.username }}</p>#}
+{#          {% else %}#}
+{#            {% endif %}#}
+{#        </div>#}
+{##}
+{#    <div class="col">#}
+{#         <div class="col">#}
+{#                {% if user.username %}#}
+{#                <a class="logo_link" href="{% url 'logout' %}">Выйти</a>#}
+{#                {% else %}#}
+{#                <a class="logo_link" href="{% url 'login' %}">Войти</a>#}
+{#                {% endif %}#}
+{##}
+{#    </div>#}
+{##}
+{##}
+{##}
+{##}
+{##}
+{#        </div>#}
+{# </div>#}
+{#</div>#}
+{#    #}
+{#{% endblock header %}#}
