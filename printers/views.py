@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
 from django.db.models import Q
 from django.http import request
 from django.shortcuts import render, get_object_or_404
@@ -14,12 +15,13 @@ class PrinterInfoView(TemplateView):
 @login_required
 def printerListView(request):
     searchQwery = request.GET.get('search', '')
+    paginator = Paginator
     if searchQwery:
         printer = Printer.objects.filter(Q(serialNumber__contains=searchQwery))
-
     else:
         printer = Printer.objects.all()
     return render(request, 'printer/printerList.html', context={'printer_': printer})
+
 
 
 class PrinterDetileView(DetailView):
