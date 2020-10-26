@@ -12,6 +12,8 @@ class PrinterInfoView(TemplateView):
     template_name = 'printer/printer_info.html'
 
 
+
+#Пагинация моя https://github.com/IldarProgrammist/PortEnergo/blob/master/person/views.py
 @login_required
 def printerListView(request):
     searchQwery = request.GET.get('search', '')
