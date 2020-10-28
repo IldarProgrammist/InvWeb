@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.db.models import Q
 from django.http import request
 from django.shortcuts import render, get_object_or_404
@@ -16,13 +16,54 @@ class PrinterInfoView(TemplateView):
 #Пагинация моя https://github.com/IldarProgrammist/PortEnergo/blob/master/person/views.py
 @login_required
 def printerListView(request):
+
+    object_list = Printer.objects.all()
     searchQwery = request.GET.get('search', '')
-    paginator = Paginator
+    printer = Printer.objects.all()
+
     if searchQwery:
         printer = Printer.objects.filter(Q(serialNumber__contains=searchQwery))
     else:
         printer = Printer.objects.all()
-    return render(request, 'printer/printerList.html', context={'printer_': printer})
+    # return render(request, 'printer/printerList.html', context={'printer_': printer})
+
+    paginator = Paginator(printer, 3)
+    page_number = request.GET.get('page', 1)
+    page = paginator.get_page(page_number)
+
+    is_paginate = page.has_other_pages()
+
+    if page.has_previous():
+        prev_url = "?page={}".format(page.previous_page_number())
+    else:
+        prev_url = ''
+
+    if page.has_next():
+        next_url = "?page={}".format(page.next_page_number())
+    else:
+        next_url = ''
+
+    context = {
+        'printer': page,
+        'is_paginate': is_paginate,
+        'next_url': next_url,
+        'prev_url': prev_url
+
+    }
+    return render(request, 'printer/printerList.html', context=context)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

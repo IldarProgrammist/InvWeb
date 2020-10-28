@@ -42,7 +42,7 @@ class Status(models.Model):
 
 class Printer(Products):
     printerModel = models.ForeignKey(PrinterModel, on_delete=models.CASCADE, verbose_name='Модель принтера')
-    room = models.ForeignKey(Room, on_delete=models.CASCADE, verbose_name='Локация')
+    # room = models.ForeignKey(Room, on_delete=models.CASCADE, verbose_name='Локация')
     ip = models.CharField(max_length=30, verbose_name='IP-адрес', blank=True)
 
 

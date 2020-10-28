@@ -25,7 +25,7 @@ class CatrigeJurnalAdmin(admin.ModelAdmin):
 
 @admin.register(Catriege)
 class CatrigeAdmin(admin.ModelAdmin):
-    list_display = ['serialNumber', 'status','date']
+    list_display = ['serialNumber']
     search_fields = ['serialNumber']
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):

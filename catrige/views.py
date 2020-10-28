@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 
 from catrige.models import *
 from django.views.generic import CreateView, UpdateView, DeleteView, TemplateView, DetailView, ListView
-from .forms import CatrigeForm, CatrigeUpdateStatusForm, CatrigeJurnalCreateForm
+from .forms import CatrigeForm,  CatrigeJurnalCreateForm
 
 
 @login_required
@@ -66,14 +66,6 @@ class UppdateCatrige(UpdateView):
     form_class = CatrigeForm
     template_name = 'catrige/UpdateCatrige.html'
     # fields = '__all__'
-
-
-
-class EditStatusCatrige(UpdateView):
-    model = Catriege
-    form_class = CatrigeUpdateStatusForm
-    template_name = 'catrige/UpdateCatrige.html'
-
 
 
 class DeleteCatrige(DeleteView):
