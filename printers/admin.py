@@ -29,4 +29,4 @@ class PrinterAdmin(admin.ModelAdmin):
 
 @admin.register(JurnalPrinter)
 class JurnalPrinterAdmin(admin.ModelAdmin):
-    list = ['numberRegistrarion', 'appeal']
+    list_display = ['appeal', 'serialNumber', 'status', 'date']
