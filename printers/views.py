@@ -13,7 +13,6 @@ class PrinterInfoView(TemplateView):
 
 
 
-#Пагинация моя https://github.com/IldarProgrammist/PortEnergo/blob/master/person/views.py
 @login_required
 def printerListView(request):
 
@@ -51,16 +50,6 @@ def printerListView(request):
 
     }
     return render(request, 'printer/printerList.html', context=context)
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -136,6 +125,7 @@ class JurnalPrinterCreate(CreateView):
     form_class =  PrinterJurnalCreateForm
     template_name = 'printer/JurnalPrinterCreate.html'
     context_object_name = 'jplc'
+
 
 
 

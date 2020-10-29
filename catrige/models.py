@@ -44,7 +44,7 @@ class Status(models.Model):
 
 class Catriege(Products):
     model = models.ForeignKey(CatrigeModel, models.CASCADE, verbose_name='Модель картриджа')
-
+    origenal = models.BooleanField(verbose_name='Оригинальный')
     class Meta:
         verbose_name = 'Картридж'
         verbose_name_plural = 'Картриджи'

@@ -38,6 +38,7 @@
                       <thead>
                       <tr>
                           <th> Серийный номер</th>
+                          <th> Имя принтера</th>
                               <th>Модель принтера</th>
                               <th>Фирма</th>
                               <th>IP</th>
@@ -48,7 +49,7 @@
                               <tbody>
                                 <tr>
                                   <td><a class="Link_login" href="{% url 'printer_detail' pk=prtinter.pk %}">{{ prtinter.serialNumber }}</a> </td>
-
+                                    <td>{{ prtinter.name }}</td>
                                      <td>{{ prtinter.printerModel.name }}</td>
                                      <td>{{ prtinter.printerModel.firm.name}}</td>
                                     <td>{{ prtinter.ip }}</td>

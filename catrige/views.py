@@ -30,8 +30,6 @@ def catrigeSearchView(request):
 
 
 
-
-
 class CatrigeListView(ListView):
     model = Catriege
     queryset = Catriege.objects.all()

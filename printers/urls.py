@@ -12,8 +12,6 @@ urlpatterns = [
     path('printerinfo/<int:pk>/', login_required(PrintInfo.as_view()), name='printInfo'),
     path('jurnal/<int:pk>/', login_required(JurnalPrinterDetileView.as_view()), name = 'jurnal_printer_detile'),
     path('jurnal/create/', login_required(JurnalPrinterCreate.as_view()), name='create_jurnal_printer'),
-    # path('jurnal/', login_required(JurnalPrinterListView.as_view()), name='jurnal_printer'),
-
     path('jurnal/', jurnalPrinterListView, name='jurnal_printer'),
 
 

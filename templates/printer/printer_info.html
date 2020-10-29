@@ -6,6 +6,7 @@
     {% endblock %}
 
 
+
     {% block content %}
         <div class="wrap-index">
          <div class="container">
@@ -18,23 +19,15 @@
 
 
                   <div class="col">
-                      <a href="{% url 'jurnal_printer' %}"><img id="img_title" class="img-wrapper" src="{% static 'img/jurnal.png' %}"></a>
+                      <a href="{% url 'jurnal_printer' %}"><img  class="img-wrapper" src="{% static 'img/jurnal.png' %}"></a>
                        <div class="link_img"> <a class="link_in_img" href="{% url 'jurnal_printer' %}">Журнал принтеров</a></div>
                 </div>
 
 
 
                  <div class="col">
-                      <a href="{% url 'compatibility' %}"><img id="img_title" class="img-wrapper" src="{% static 'img/pazli.png' %}"></a>
+                      <a href="{% url 'compatibility' %}"><img  class="img-wrapper" src="{% static 'img/pazli.png' %}"></a>
                      <div class="link_img"> <a class="link_in_img" href="{% url 'compatibility' %}">Совместимость с картриджами</a></div>
-                </div>
-
-
-
-                <div class="col">
-                      <a href="{% url 'printerList' %}"><img class="img-wrapper" src="{% static 'img/wrenchandcogwheel_87353.png' %}"></a>
-                        <div class="link_img" > <a class="link_in_img" href="{% url 'printerList' %}">Ремонт принтеров</a></div>
-                </div>
                 </div>
 
             </div>

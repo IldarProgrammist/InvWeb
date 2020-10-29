@@ -67,7 +67,7 @@ WSGI_APPLICATION = 'InvWeb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'InwWebDB',
+        'NAME': 'InvWebDB',
         'USER': 'postgres',
         'PASSWORD': 'masterkey',
         'HOST': '127.0.0.1',
