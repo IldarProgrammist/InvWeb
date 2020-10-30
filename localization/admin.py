@@ -8,4 +8,4 @@ class Titul(admin.ModelAdmin):
 
 @admin.register(Room)
 class Room(admin.ModelAdmin):
-    list_display = ('numberTitul','titul', 'numberRoom','flor')
+    list_display = ('numberTitul','titul', 'numberRoom')

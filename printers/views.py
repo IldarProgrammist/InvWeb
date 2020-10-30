@@ -1,7 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.db.models import Q
-from django.http import request
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import *
 from printers.forms import PrinterJurnalCreateForm, PrinterJurnalStatusForm
@@ -10,50 +9,6 @@ from printers.models import PrinterModel, JurnalPrinter, Printer
 
 class PrinterInfoView(TemplateView):
     template_name = 'printer/printer_info.html'
-
-
-
-@login_required
-def printerListView(request):
-
-    object_list = Printer.objects.all()
-    searchQwery = request.GET.get('search', '')
-    printer = Printer.objects.all()
-
-    if searchQwery:
-        printer = Printer.objects.filter(Q(serialNumber__contains=searchQwery))
-    else:
-        printer = Printer.objects.all()
-    # return render(request, 'printer/printerList.html', context={'printer_': printer})
-
-    paginator = Paginator(printer, 3)
-    page_number = request.GET.get('page', 1)
-    page = paginator.get_page(page_number)
-
-    is_paginate = page.has_other_pages()
-
-    if page.has_previous():
-        prev_url = "?page={}".format(page.previous_page_number())
-    else:
-        prev_url = ''
-
-    if page.has_next():
-        next_url = "?page={}".format(page.next_page_number())
-    else:
-        next_url = ''
-
-    context = {
-        'printer': page,
-        'is_paginate': is_paginate,
-        'next_url': next_url,
-        'prev_url': prev_url
-
-    }
-    return render(request, 'printer/printerList.html', context=context)
-
-
-
-
 
 
 class PrinterDetileView(DetailView):
@@ -90,15 +45,29 @@ def printerDetile(request,pk ):
 
 
 
-@login_required
-def printerListView(request):
-    searchQwery = request.GET.get('search', '')
-    if searchQwery:
-        printer = Printer.objects.filter(Q(serialNumber__contains=searchQwery))
-    else:
-        printer = Printer.objects.all()
+# @login_required
+# def printerListView(request):
+#     searchQwery = request.GET.get('search', '')
+#     if searchQwery:
+#         printer = Printer.objects.filter(Q(serialNumber__contains=searchQwery))
+#     else:
+#         printer = Printer.objects.all()
+#
+#
+#     return render(request, 'printer/printerList.html', context={'printer_': printer})
 
-    return render(request, 'printer/printerList.html', context={'printer_': printer})
+
+class PrinterListView(ListView):
+    model = Printer
+    template_name = 'printer/printerList.html'
+    context_object_name = 'printer_'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q',"")
+        object_list =Printer.objects.filter(Q(serialNumber__contains=query))
+        return object_list
+
+
 
 
 @login_required
@@ -135,6 +104,22 @@ class JurnalPrinterCreate(CreateView):
 
 
 
+#
+# @login_required
+# def printerListView(request):
+#
+#     object_list = Printer.objects.all()
+#     searchQwery = request.GET.get('search', '')
+#     printer = Printer.objects.all()
+#
+#     if searchQwery:
+#         printer = Printer.objects.filter(Q(serialNumber__contains=searchQwery))
+#     else:
+#         printer = Printer.objects.all()
+#     return render(request, 'printer/printerList.html', context={'printer_': printer})
+#
+#
+#
 
 
 

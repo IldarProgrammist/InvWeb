@@ -20,7 +20,7 @@ class PrinterChoiceField(forms.ModelChoiceField):
 
 @admin.register(Printer)
 class PrinterAdmin(admin.ModelAdmin):
-    list_display = ['serialNumber', 'category']
+    list_display = ['serialNumber', 'category','ip','printerModel','room']
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == 'category':

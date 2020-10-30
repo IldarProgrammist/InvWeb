@@ -5,7 +5,8 @@ from django.contrib.auth.decorators import login_required
 urlpatterns = [
 
     path('', login_required(PrinterInfoView.as_view()), name='printer'),
-    path('list/', printerListView, name='printerList'),
+    # path('list/', printerListView, name='printerList'),
+    path('list/',login_required(PrinterListView.as_view()), name='printerList'),
     path('detile/<int:pk>/', login_required(PrinterDetileView.as_view()), name='printer_detail'),
     path('compatibility/', login_required(PrinterCatrigeView.as_view()),name = 'compatibility'),
     path('compatibility/<int:pk>/', login_required(PrinterCatrigeDetileView.as_view()), name='compatibility_detile'),
