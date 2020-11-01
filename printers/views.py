@@ -44,41 +44,52 @@ def printerDetile(request,pk ):
     return render(request, 'printer/listDetail.html',{'printer':prtinter})
 
 
-
-# @login_required
-# def printerListView(request):
-#     searchQwery = request.GET.get('search', '')
-#     if searchQwery:
-#         printer = Printer.objects.filter(Q(serialNumber__contains=searchQwery))
-#     else:
-#         printer = Printer.objects.all()
-#
-#
-#     return render(request, 'printer/printerList.html', context={'printer_': printer})
-
-
 class PrinterListView(ListView):
     model = Printer
     template_name = 'printer/printerList.html'
     context_object_name = 'printer_'
+    paginate_by=4
 
     def get_queryset(self):
         query = self.request.GET.get('q',"")
-        object_list =Printer.objects.filter(Q(serialNumber__contains=query))
+        object_list =Printer.objects.filter(Q(serialNumber__contains=query) |
+                                            Q(printerName__contains=query)
+                                            )
         return object_list
-
-
 
 
 @login_required
 def jurnalPrinterListView(request):
 
-    searchQwery = request.GET.get('search', '')
+    searchQwery = request.GET.get('q', '')
     if searchQwery:
-        jurnalPrinter = JurnalPrinter.objects.filter(Q(status__name =searchQwery) | Q(serialNumber__serialNumber__icontains =searchQwery) )
+        jurnalPrinter = JurnalPrinter.objects.filter(Q(status__name =searchQwery) |
+                                                     Q(serialNumber__serialNumber =searchQwery) )
     else:
         jurnalPrinter = JurnalPrinter.objects.all()
     return render(request, 'printer/JurnalListPrinter.html', context={'jpl': jurnalPrinter})
+
+
+
+class JurnalPrinterListView(ListView):
+    model = JurnalPrinter
+    queryset = JurnalPrinter.objects.all()
+    template_name = 'printer/JurnalListPrinter.html'
+    paginate_by = 4
+    context_object_name = 'jpl'
+
+
+    def get_queryset(self):
+        query = self.request.GET.get('q','')
+        object_list =JurnalPrinter.objects.filter(
+                                            Q(status__name =query)|
+                                            Q(serialNumber__serialNumber__contains=query)
+                                            )
+        return object_list.order_by('-date')
+
+
+
+
 
 
 

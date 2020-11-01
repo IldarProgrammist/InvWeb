@@ -19,16 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="Добавлен в Модель Catrgige Boolean поле Original">
-      <change beforePath="$PROJECT_DIR$/.idea/InvWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/InvWeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9f5f525a-9916-4dd9-970c-8c2f9da06d31" name="Default" comment="Переписана функция printerListView вместо нее будет class PrinterListView">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/localization/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/localization/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/printers/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/printers/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/printers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/printers/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/printers/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/printers/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/printers/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/printers/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/paginator.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paginator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/printer/JurnalListPrinter.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/JurnalListPrinter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/printer/printerList.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/printerList.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,6 +101,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="InvWeb.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -133,6 +131,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599935910852</updated>
+      <workItem from="1604164303887" duration="679000" />
+      <workItem from="1604166371482" duration="10684000" />
     </task>
     <task id="LOCAL-00001" summary="Добавление модели PrinterCatrigeCompatidility">
       <created>1599981199294</created>
@@ -232,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603983575530</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Переписана функция printerListView вместо нее будет class PrinterListView">
+      <created>1604031964025</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1604031964026</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -271,16 +278,18 @@
     <MESSAGE value="создание файла requirements.txt" />
     <MESSAGE value="добавление  файла Catrige.html&#10;добавление  палели поиска в файле Catrige.html" />
     <MESSAGE value="Добавлен в Модель Catrgige Boolean поле Original" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен в Модель Catrgige Boolean поле Original" />
+    <MESSAGE value="Переписана функция printerListView вместо нее будет class PrinterListView" />
+    <option name="LAST_COMMIT_MESSAGE" value="Переписана функция printerListView вместо нее будет class PrinterListView" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="9" key="SettingsEditor" timestamp="1603992767902">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1603992767902" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603983582130">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="393" y="177" key="Vcs.Push.Dialog.v2" timestamp="1604031969825">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="393" y="177" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1604031969825" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603983582130" />
   </component>
 </project>

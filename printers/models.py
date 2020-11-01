@@ -61,7 +61,7 @@ class Printer(Products):
 
 
 class JurnalPrinter(models.Model):
-    appeal = models.CharField(max_length=100, verbose_name='Номер обращение')
+    appeal = models.CharField(max_length=100, verbose_name='Номер обращение', unique=True)
     serialNumber = models.ForeignKey(Printer, on_delete= models.CASCADE, verbose_name='Серийный номер',related_name='sn')
     status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус',related_name='st')
     date = models.DateField(verbose_name='Дата регистрации')

@@ -61,16 +61,11 @@
 
                     {% endfor %}
                 </table>
-
             </div>
 
+        {% include 'paginator.html' %}
 
     {% endblock %}
-
-    {% block paginator %}
-        {% include 'paginator.html'%}
-    {% endblock %}
-
     {% block footer %}
          {% include 'footer.html' %}
     {% endblock %}
